@@ -21,12 +21,14 @@
 | 运行时 | 内置浏览器生产页面控制台未记录error/warn |
 | 原创资源 | 三套描边模板、四张成品示意SVG、192/512/180 PNG均存在；无第三方成品图片 |
 | 部署门禁 | 工作流main触发，build成功后deploy，内容哈希版本、Pages权限、锁文件安装、类型和数据门禁均已配置 |
+| macOS Safari | 真实 Safari 打开 HTTPS 站点，完成抽卡、动画揭晓和原生配方弹窗，原料/步骤/过敏原可见 |
+| 用户真机反馈 | 用户对“安装→离线就绪→断网重开→抽卡/详情/收藏→恢复网络”反馈“通过”；具体平台与版本仍需补充 |
 
 ## 尚需真实设备验收
 
 内置浏览器视口模拟不代表真机。以下未宣称通过，需要在实际设备上补充：
 
-- iOS Safari 与 macOS Safari：安装为独立窗口、状态栏安全区域、离线重启、系统减少动态和字体放大。
+- iOS Safari：安装为独立窗口、状态栏安全区域、离线重启、系统减少动态和字体放大的具体设备版本。
 - Android Chrome：安装、触摸和低性能设备动画、离线启动与网络恢复。
 - Windows Chrome/Edge：安装后窗口模式、键盘和更新行为。
 - 移动网络下首屏及滚动性能基线。
@@ -35,4 +37,11 @@
 
 ## 发布状态
 
-目标仓库 unknownparticles/cafe，Pages 发布源已设为 GitHub Actions。用户确认沿用账号自定义域名 alunapp.cn，路径为 /cafe/。发布结果和公开资源核验将在实际工作流完成后补充，未完成前不宣称上线验收通过。
+目标仓库 unknownparticles/cafe，Pages 发布源为 GitHub Actions。用户确认沿用账号自定义域名 alunapp.cn，路径为 /cafe/。
+
+- 首次发布提交：32b59e9。
+- 工作流：https://github.com/unknownparticles/cafe/actions/runs/38543945695，build/deploy 全部 success。
+- 正式地址：https://alunapp.cn/cafe/，HTTPS 返回200。
+- 入口、配方JSON、Manifest、SW、192/512图标和杯形SVG与本地dist逐字节一致，哈希JS/CSS返回200。
+- 线上已完成抽卡/跳过、图鉴60条与hash路由刷新；缓存就绪提示正常。
+- 首页截图：desktop-preview.jpg。

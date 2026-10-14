@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import type { FinishConfig } from './types';
 import { FinishArtwork } from './FinishArtwork';
 
-/** Card revelation reuses the finished geometry; its brief clock runs only during drawing. */
+/** The item clock starts after the card flip; initial progress prevents a complete-frame flash. */
 export function AnimatedFinish({ config, drawing, staticMode }: { config: FinishConfig; drawing: boolean; staticMode: boolean }) {
-  const [progress, setProgress] = useState(1);
+  const [progress, setProgress] = useState(drawing && !staticMode ? 0 : 1);
   useEffect(() => {
     if (!drawing || staticMode) { setProgress(1); return; }
     let frame = 0;

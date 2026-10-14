@@ -32,7 +32,7 @@ export function isGeneratedRecipes(value: unknown): value is Recipe[] {
     const source = recipe.source;
     if (!object(source) || source.sourceType !== 'original' || source.sourceUrl !== 'docs/cocktail-sources.md' || source.reviewStatus !== 'reviewed' || source.imageLicenseStatus !== 'original' || !date(source.lastVerifiedAt) || !['sourceName', 'license', 'attribution', 'reviewNote'].every(key => text(source[key]))) return false;
     const info = recipe.cocktail;
-    if (!object(info) || !oneOf(info.kind, ['variation', 'experimental']) || !oneOf(info.method, ['shake', 'build']) || info.tested !== false || !text(info.glassware, 100) || !text(info.ice, 100) || !strings(info.baseSpirits) || typeof info.dilutionMl !== 'number' || !Number.isFinite(info.dilutionMl) || info.dilutionMl < 0 || info.dilutionMl > 200) return false;
+    if (!object(info) || !oneOf(info.kind, ['variation', 'experimental']) || !oneOf(info.method, ['shake', 'build', 'stir']) || info.tested !== false || !text(info.glassware, 100) || !text(info.ice, 100) || !strings(info.baseSpirits) || typeof info.dilutionMl !== 'number' || !Number.isFinite(info.dilutionMl) || info.dilutionMl < 0 || info.dilutionMl > 200) return false;
     const typed = recipe as unknown as Recipe;
     return info.estimatedAbv === estimateAbv(typed.ingredients, info.dilutionMl) && (info.kind !== 'variation' || info.variationOf === 'cocktail-john-collins');
   });
@@ -64,10 +64,14 @@ export function validateBackup(value: unknown, recipes: Recipe[], dictionary: Co
   if (pantry.tools.some(tool => !['量杯', '酒杯', '吧匙', '摇酒壶', '滤冰器', '调酒杯'].includes(tool)) || pantry.flavors.some(flavor => !['清爽', '果香', '酸', '甜', '苦', '浓郁', '草本', '辛香'].includes(flavor))) return false;
   return value.generated.every(recipe => {
     const preferences: PantryPreferences = { available: recipe.ingredients.map(item => item.ingredientId!), uncertain: [], locked: [], excluded: [], flavors: [], tools: ['量杯', '酒杯', '吧匙', '摇酒壶', '滤冰器', '调酒杯'], alcohol: 'any', shopping: 'only' };
-    // At most 5 bases × 2 acids and 4 zero-alcohol templates exist; rotation visits every candidate.
-    for (let round = 0; round < 40; round++) {
-      const match = generateCocktails(recipes, dictionary, preferences, round).find(item => item.id === recipe.id);
-      if (match) return canonical(match) === canonical(recipe);
+    const match = generateCocktails(recipes, dictionary, preferences, 0).find(item => item.id === recipe.id);
+    if (!match) return false;
+    if (canonical(match) === canonical(recipe)) return true;
+    // Sour names changed with the tab UI; accept the exact prior name without changing saved ratios.
+    if (match.cocktail?.method === 'shake' && !recipe.ingredients.some(item => item.note)) {
+      const base = dictionary.find(item => item.id === recipe.ingredients[0]?.ingredientId);
+      const acid = dictionary.find(item => item.id === recipe.ingredients[1]?.ingredientId);
+      if (base && acid && recipe.name === `${base.name}${acid.name}酸甜实验`) return canonical({ ...match, name: recipe.name }) === canonical(recipe);
     }
     return false;
   });

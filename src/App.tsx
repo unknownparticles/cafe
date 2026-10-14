@@ -41,14 +41,15 @@ export default function App() {
   const [reduced, setReduced] = useState(matchMedia('(prefers-reduced-motion: reduce)').matches);
   const [current, setCurrent] = useState<Recipe | null>(null);
   const [detail, setDetail] = useState<Recipe | null>(null);
-  const [phase, setPhase] = useState<'idle' | 'drawing' | 'flipping' | 'revealed'>('idle');
+  const [phase, setPhase] = useState<'idle' | 'drawing' | 'flipping' | 'revealing' | 'revealed'>('idle');
   const [announcement, setAnnouncement] = useState('');
   const [hasDrawn, setHasDrawn] = useState(false);
   const busy = useRef(false);
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
   const drawButton = useRef<HTMLButtonElement>(null);
   const pwa = usePwa();
-  const isBusy = phase === 'drawing' || phase === 'flipping';
+  const isBusy = phase === 'drawing' || phase === 'flipping' || phase === 'revealing';
+  const contentHidden = phase === 'drawing' || phase === 'flipping';
   const filters = { category, difficulty, query, favoritesOnly: favoritesOnly || page === 'favorites' };
   const candidates = filterRecipes(recipes, filters, favorites);
 
@@ -110,7 +111,7 @@ export default function App() {
     if (!animation || reduced) { setAnnouncement(`已揭晓：${recipe.name}，${difficultyNames[recipe.difficulty]}，${recipe.totalTimeMinutes} 分钟。`); setPhase('revealed'); return; }
     setAnnouncement('正在为你挑选一份灵感。');
     busy.current = true; setPhase('drawing');
-    timers.current = [setTimeout(() => setPhase('flipping'), 1300), setTimeout(finishReveal, 3200)];
+    timers.current = [setTimeout(() => setPhase('flipping'), 1300), setTimeout(() => setPhase('revealing'), 3200), setTimeout(finishReveal, 4400)];
   }
 
   const navigation: { id: Page; name: string }[] = [{ id: 'draw', name: '今日灵感' }, { id: 'collection', name: '配方图鉴' }, { id: 'favorites', name: '我的收藏' }, { id: 'pantry', name: '材料调酒' }];
@@ -128,7 +129,7 @@ export default function App() {
             {(query || difficulty || favoritesOnly) && <div className="active-filters" role="status"><span>{candidates.length ? '沿用图鉴筛选' : '没有符合筛选的配方'}{query && ` · ${query}`}{difficulty && ` · ${difficultyNames[difficulty]}`}{favoritesOnly && ' · 仅收藏'}</span><button className="text-button" onClick={() => { setQuery(''); setDifficulty(''); setFavoritesOnly(false); }}>清除筛选</button></div>}
           </div>
           <div className="card-stage"><span className="stage-note">a little ritual, just for you</span><span className="decor-star star-one" aria-hidden="true"><RitualIcon kind="star" /></span><span className="decor-star star-two" aria-hidden="true"><RitualIcon kind="sparkle" /></span><div className="card-shadow card-shadow-one" /><div className="card-shadow card-shadow-two" />
-            {current && <article className={`ritual-card phase-${phase} art-${current.group}`} aria-busy={isBusy}><div className="card-top"><span>THE DAILY COLLECTION</span><span>No. {String(recipes.indexOf(current) + 1).padStart(2, '0')}</span></div><div className="card-illustration"><div className="art-orbit" /><AnimatedFinish key={current.id} config={current.artwork.finish} drawing={phase === 'drawing'} staticMode={!animation || reduced} /><span className="art-caption">{current.category === 'coffee' ? 'BREW A LITTLE HAPPINESS' : current.category === 'cocktail' ? 'SHAKE A LITTLE INSPIRATION' : 'A MOMENT OF SWEETNESS'}</span></div><div className={`card-copy ${isBusy ? 'concealed' : ''}`}><span className="card-category">{groupNames[current.group]} · {rarityNames[current.rarity]}</span><h2>{current.name}</h2><p>{current.flavorTags.join(' / ')}</p><div className="card-divider" /><div className="card-bottom"><span>◷ {current.totalTimeMinutes} 分钟</span><span>{difficultyNames[current.difficulty]}</span></div></div><span className="card-seal" aria-hidden="true"><RitualIcon kind="star" /></span></article>}
+            {current && <article className={`ritual-card phase-${phase} art-${current.group}`} aria-busy={isBusy}><div className="card-top"><span>THE DAILY COLLECTION</span><span>No. {String(recipes.indexOf(current) + 1).padStart(2, '0')}</span></div><div className={`card-illustration ${contentHidden ? 'concealed' : ''}`} aria-hidden={contentHidden}><div className="art-orbit" />{!contentHidden && <AnimatedFinish key={`${current.id}-${phase === 'revealing' ? 'reveal' : 'complete'}`} config={current.artwork.finish} drawing={phase === 'revealing'} staticMode={!animation || reduced} />}<span className="art-caption">{current.category === 'coffee' ? 'BREW A LITTLE HAPPINESS' : current.category === 'cocktail' ? 'SHAKE A LITTLE INSPIRATION' : 'A MOMENT OF SWEETNESS'}</span></div><div className={`card-copy ${contentHidden ? 'concealed' : ''}`} aria-hidden={contentHidden}><span className="card-category">{groupNames[current.group]} · {rarityNames[current.rarity]}</span><h2>{current.name}</h2><p>{current.flavorTags.join(' / ')}</p><div className="card-divider" /><div className="card-bottom"><span>◷ {current.totalTimeMinutes} 分钟</span><span>{difficultyNames[current.difficulty]}</span></div></div><span className="card-seal" aria-hidden="true"><RitualIcon kind="star" /></span></article>}
             <div className="stage-bottom"><span className="handwritten">留一点时间，给喜欢的事。</span></div>
           </div>
         </section>

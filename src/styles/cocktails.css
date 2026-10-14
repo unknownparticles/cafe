@@ -8,26 +8,42 @@
 .home-bar-entry .eyebrow { margin-bottom: 10px; }
 .home-bar-entry .primary { flex-shrink: 0; }
 .pantry-page { padding: 48px 26px 60px; }
-.pantry-layout { display: grid; grid-template-columns: minmax(270px, 340px) minmax(0, 1fr); gap: 30px; align-items: start; }
+.pantry-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; align-items: start; }
 .pantry-panel { background: #fcf9f2; border: 1px solid var(--border); padding: 20px; border-radius: 7px; margin-bottom: 20px; }
 .pantry-panel h2 { font-size: 22px; font-weight: 500; margin: 0 0 12px; }
 .pantry-panel h3 { font-size: 13px; margin: 24px 0 12px; }
 .pantry-panel .section-row { gap: 8px; flex-wrap: wrap; }
 .pantry-panel .section-row span { font-size: 10px; color: var(--muted); }
 .pantry-panel .search-field { min-width: 0; margin: 18px 0 10px; }
-.pantry-filter-row { display: flex; gap: 8px; }
-.pantry-filter-row .select-field { min-width: 0; flex: 1; }
-.pantry-filter-row select { width: 100%; padding-right: 10px; }
-.pantry-filter-row .filter-favorite { padding: 0 10px; }
-.ingredient-picker { max-height: 530px; overflow: auto; margin-top: 12px; padding-right: 4px; scrollbar-width: thin; }
-.stock-item { display: grid; grid-template-columns: minmax(0, 1fr) 80px; gap: 4px 8px; align-items: center; border-bottom: 1px dashed var(--border); padding: 11px 0 7px; }
-.stock-item strong { display: block; font-size: 12px; font-weight: 500; }
-.stock-item small { display: block; font-size: 9px; color: var(--muted); }
-.stock-item select, .pantry-select select, .notes-controls select { min-height: 44px; background: #fffaf2; border: 1px solid var(--border); color: var(--ink); border-radius: 4px; font-size: 12px; padding: 0 8px; width: 100%; }
-.stock-actions { display: flex; gap: 5px; grid-column: 1 / -1; }
-.stock-actions button { font-size: 10px; min-height: 44px; padding: 0 11px; border-radius: 4px; }
-.stock-actions button[aria-pressed="true"] { background: #e4e8d9; color: #536347; }
-.stock-item.excluded strong { text-decoration: line-through; color: var(--muted); }
+.pantry-select select, .notes-controls select { min-height: 44px; background: #fffaf2; border: 1px solid var(--border); color: var(--ink); border-radius: 4px; font-size: 12px; padding: 0 8px; width: 100%; }
+.ingredient-tabs-panel { padding: 0; overflow: hidden; }
+.ingredient-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid var(--border); }
+.ingredient-tabs [role="tab"] { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; min-height: 78px; padding: 12px; color: var(--muted); border-bottom: 3px solid transparent; }
+.ingredient-tabs [role="tab"][aria-selected="true"] { background: #e8ecdf; color: #526147; border-bottom-color: #7d8a66; }
+.ingredient-tab-number { font: italic 18px Georgia, serif; color: #a28f72; }
+.ingredient-tabs small { font-size: 10px; }
+.ingredient-tab-panel { padding: 26px; }
+.ingredient-tab-panel .section-row { justify-content: space-between; }
+.ingredient-choice-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.ingredient-choice { display: flex; align-items: center; gap: 12px; min-height: 78px; padding: 14px; text-align: left; border: 1px solid var(--border); background: #fffaf2; border-radius: 6px; }
+.ingredient-choice[aria-pressed="true"] { background: #e7ecdc; border-color: #85946c; }
+.ingredient-choice strong { display: block; font-size: 13px; font-weight: 500; }
+.ingredient-choice small { display: block; font-size: 10px; color: var(--muted); margin-top: 5px; }
+.ingredient-swatch { width: 24px; height: 32px; border: 1px solid #78573c38; border-radius: 5px 5px 10px 10px; flex-shrink: 0; }
+.ingredient-check { margin-left: auto; color: #71805d; }
+.ingredient-tab-navigation { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 20px; }
+.ingredient-preparation { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding: 18px 26px; border-top: 1px solid var(--border); font-size: 12px; }
+.ingredient-preparation button[aria-pressed="true"] { background: #e7ecdc; border-color: #85946c; }
+.ingredient-selection-summary { padding: 18px 26px; border-top: 1px solid var(--border); font-size: 12px; }
+.ingredient-selection-summary > div { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px; }
+.selected-material { min-height: 44px; padding: 7px 12px; background: #eee5d7; border-radius: 4px; font-size: 11px; }
+.pantry-options { border: 1px solid var(--border); border-radius: 6px; background: #fcf9f2; }
+.pantry-options summary { padding: 18px 22px; cursor: pointer; font-size: 13px; }
+.pantry-options .pantry-panel { margin: 0; border: 0; }
+.combine-action { position: sticky; bottom: 0; z-index: 4; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 20px; padding: 14px 18px calc(14px + env(safe-area-inset-bottom)); background: #faf6edf5; border: 1px solid var(--border); border-radius: 6px; }
+.combine-action p, .combine-action > span { font-size: 12px; color: var(--muted); }
+.combine-action .primary { min-width: 180px; }
+.more-combinations { display: block; margin: 24px auto 0; }
 .preference-chips { display: flex; flex-wrap: wrap; gap: 7px; }
 .preference-chips button { border: 1px solid var(--border); border-radius: 4px; min-height: 44px; padding: 8px 12px; font-size: 11px; }
 .preference-chips button[aria-pressed="true"] { background: #e3e8d7; border-color: #9da785; }
@@ -65,7 +81,7 @@
 .backup-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .backup-preview { padding: 16px; background: #e7eadc; margin-top: 20px; border-radius: 4px; }
 .backup-preview .text-button { margin-left: 16px; }
-@media (max-width: 1000px) { .pantry-layout { gap: 20px; grid-template-columns: 280px minmax(0, 1fr); } .cocktail-results-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1000px) { .pantry-layout { gap: 20px; } }
 @media (max-width: 720px) {
   /* A second navigation row keeps all four destinations readable on narrow phones. */
   .site-header { display: grid; grid-template-columns: minmax(0, 1fr) 44px; grid-template-rows: 42px 44px; height: calc(100px + env(safe-area-inset-top)); padding: calc(7px + env(safe-area-inset-top)) 20px 7px; gap: 0; }
@@ -81,9 +97,7 @@
   .home-bar-entry h2 { font-size: 23px; }
   .pantry-page { padding: 30px 20px 40px; }
   .pantry-layout { grid-template-columns: 1fr; gap: 20px; }
-  .ingredient-picker { max-height: 390px; }
   .pantry-panel { padding: 18px; }
-  .stock-item { grid-template-columns: minmax(0, 1fr) 90px; }
   .cocktail-results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .cocktail-result-art { height: 140px; }
   .cocktail-result-body { padding: 12px; }
@@ -99,4 +113,18 @@
   .site-header nav { width: auto; margin-left: auto; }
   .site-header .brand { font-size: 18px; }
   .draw-page .hero { height: calc(100svh - 102px); }
+}
+
+@media (max-width: 720px) {
+  .pantry-panel.ingredient-tabs-panel { padding: 0; }
+  .ingredient-tabs [role="tab"] { flex-direction: column; gap: 6px; padding: 12px 4px; font-size: 11px; }
+  .ingredient-tab-number { display: none; }
+  .ingredient-tabs small { font-size: 9px; }
+  .ingredient-tab-panel { padding: 18px; }
+  .ingredient-choice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .ingredient-choice { padding: 10px; gap: 8px; min-height: 78px; }
+  .ingredient-choice strong { font-size: 12px; }
+  .ingredient-swatch { width: 17px; height: 25px; }
+  .ingredient-preparation, .ingredient-selection-summary { padding: 16px 18px; }
+  .combine-action .primary { width: 100%; }
 }

@@ -1,5 +1,6 @@
 import { useId } from 'react';
 import { Decoration } from './parts';
+import { CocktailGarnish } from './CocktailGarnish';
 import type { FinishConfig } from './types';
 
 /** The same parametric finished recipe appears on cards, in the atlas and at the end of a step. */
@@ -9,7 +10,11 @@ export function FinishArtwork({ config, progress = 1, label }: { config: FinishC
   const { shape, color, layers, accent, garnish, pattern } = config;
   const cup = ['espresso', 'latte', 'iced', 'filter'].includes(shape);
   const dish = ['pudding', 'jelly', 'mousse', 'layered', 'oats', 'rice', 'sago'].includes(shape);
+  const cocktail = ['coupe', 'highball', 'rocks'].includes(shape);
   const body = (() => {
+    if (shape === 'coupe') return 'M80 82h140c-7 66-133 66-140 0Z';
+    if (shape === 'highball') return 'M109 63h82l-7 139h-68Z';
+    if (shape === 'rocks') return 'M92 116h116l-9 86h-98Z';
     if (cup) return shape === 'iced' ? 'M92 75h116l-14 125H106Z' : 'M77 105h132v47c0 66-132 66-132 0Z';
     if (dish) return 'M91 86h118l-10 113c-22 14-76 14-98 0Z';
     if (shape === 'round-cake') return 'M79 122c0-40 142-40 142 0v58c-20 26-118 26-142 0Z';
@@ -33,7 +38,7 @@ export function FinishArtwork({ config, progress = 1, label }: { config: FinishC
       <ellipse cx="150" cy="214" rx="82" ry="10" stroke="#dfd0ba" />
       <path d={body} fill={color} />
       <g clipPath={`url(#${clip})`} opacity={Math.min(1, p * 2)}>
-        {(cup || dish ? layers : []).map((layer, i) => <rect key={i} x="65" y={192 - (i + 1) * 92 / Math.max(1, layers.length)} width="170" height={92 / Math.max(1, layers.length)} fill={layer} stroke="none" />)}
+        {(cup || dish || cocktail ? layers : []).map((layer, i) => <rect key={i} x="65" y={(cocktail ? 202 : 192) - (i + 1) * (cocktail ? 139 : 92) / Math.max(1, layers.length)} width="170" height={(cocktail ? 139 : 92) / Math.max(1, layers.length)} fill={layer} stroke="none" />)}
         {pattern === 'speckled' && Array.from({ length: 26 }, (_, i) => <ellipse key={i} cx={88 + i * 19 % 125} cy={98 + i * 31 % 86} rx="2" ry="1.4" fill={accent} stroke="none" />)}
         {pattern === 'striped' && [0, 1, 2, 3, 4].map(i => <path key={i} d={`M${82 + i * 27} 80q-30 60 10 125`} stroke={accent} opacity=".7" />)}
         {pattern === 'scored' && <path d="m95 110 100 55m-95-10 87-46m-53-22 4 101" stroke={accent} />}
@@ -43,13 +48,15 @@ export function FinishArtwork({ config, progress = 1, label }: { config: FinishC
         {shape === 'sago' && Array.from({ length: 24 }, (_, i) => <circle key={i} cx={105 + i * 13 % 90} cy={130 + i * 19 % 60} r="3.4" fill="#faf3dc" stroke="none" />)}
       </g>
       <path d={body} />
+      {shape === 'coupe' && <path d="M150 132v67m-32 2h64" />}
+      {cocktail && <><ellipse cx="150" cy={shape === 'coupe' ? 82 : shape === 'highball' ? 63 : 116} rx={shape === 'coupe' ? 70 : shape === 'highball' ? 41 : 58} ry="7" />{shape !== 'coupe' && [0, 1, 2].map(i => <rect key={i} x={120 + i * 15} y={130 + i % 2 * 23} width="20" height="22" rx="3" fill="#e1eae0" opacity=".6" transform={`rotate(${i * 13} 150 155)`} />)}</>}
       {cup && shape !== 'iced' && <><path d="M210 117c48-14 48 49-1 44" /><ellipse cx="143" cy="105" rx="65" ry="13" fill={color} /></>}
       {shape === 'iced' && <ellipse cx="150" cy="75" rx="58" ry="8" />}
       {dish && <ellipse cx="150" cy="86" rx="59" ry="10" fill={layers.at(-1) ?? color} />}
       {shape === 'pear' && <path d="M147 77q-10-35 13-44m-10 22q26-25 35-8-20 21-35 8M145 117q-28 21-11 40 21 17 23-12-2-17-12-28Z" fill={accent} />}
       {shape === 'crumble' && <g fill={accent}>{Array.from({ length: 19 }, (_, i) => <path key={i} d={`m${86 + i * 17 % 128} ${117 + i * 13 % 18} 4-8 9 4-3 7Z`} />)}</g>}
       {shape === 'cheesecake' && <path d="m80 129 133-2-45-66Z" fill={accent} opacity=".45" />}
-      <g transform={`translate(150 ${cup ? (shape === 'iced' ? 74 : 103) : dish ? 80 : shape === 'muffin' ? 83 : 108}) scale(${Math.min(1, Math.max(0, (p - .35) / .4))})`}><Decoration kind={garnish} color={accent} /></g>
+      {cocktail ? <CocktailGarnish finish={config} progress={Math.min(1, Math.max(0, (p - .35) / .4))} /> : <g transform={`translate(150 ${cup ? (shape === 'iced' ? 74 : 103) : dish ? 80 : shape === 'muffin' ? 83 : 108}) scale(${Math.min(1, Math.max(0, (p - .35) / .4))})`}><Decoration kind={garnish} color={accent} /></g>}
     </g>
     {p > .72 && <g opacity={(p - .72) / .28} stroke={accent}><path d="m237 60 0 18m-9-9h18m-191 95v12m-6-6h12" /></g>}
   </svg>;

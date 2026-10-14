@@ -1,0 +1,7 @@
+import type { MakingRecord } from '../types';
+
+/** Keep personal changes separate from the reference ratios and public recipe text. */
+export function MakingNotes({ record, onChange }: { record?: MakingRecord; onChange: (value: MakingRecord) => void }) {
+  const value = record ?? { status: 'want', rating: 0, note: '', adjustments: '' };
+  return <section className="making-notes" aria-labelledby="making-notes-title"><h3 id="making-notes-title">我的味觉手账</h3><div className="notes-controls"><label>制作状态<select aria-label="制作状态" value={value.status} onChange={event => onChange({ ...value, status: event.target.value as MakingRecord['status'] })}><option value="want">想尝试</option><option value="made">已制作</option></select></label><label>个人评分<select aria-label="个人评分" value={value.rating} onChange={event => onChange({ ...value, rating: Number(event.target.value) })}><option value="0">未评分</option>{[1, 2, 3, 4, 5].map(rating => <option key={rating} value={rating}>{rating} / 5</option>)}</select></label></div><label>实际调整比例<textarea value={value.adjustments} maxLength={3000} rows={2} placeholder="例如：糖浆改为 10 ml" onChange={event => onChange({ ...value, adjustments: event.target.value })} /></label><label>个人备注<textarea value={value.note} maxLength={3000} rows={3} placeholder="记下这杯的味道，下次再试试" onChange={event => onChange({ ...value, note: event.target.value })} /></label><p className="fine-print">自动保存在本机；个人评分与制作状态不代表公开配方已通过实测。</p></section>;
+}

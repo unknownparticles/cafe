@@ -1,6 +1,6 @@
 # Daily Ritual · 日常灵感事务所
 
-移动优先的咖啡与甜品抽卡 PWA。React + TypeScript + Vite，配方和原创 SVG 均为本地静态资源，无后端、无运行时第三方 API、无外部字体。
+移动优先的咖啡、甜品与鸡尾酒抽卡 PWA。React + TypeScript + Vite，配方和原创 SVG 均为本地静态资源，无后端、无运行时第三方 API、无外部字体。
 
 ## 本地运行
 
@@ -18,11 +18,11 @@ npm run build
 npm run preview
 ```
 
-`build` 必须依次通过 TypeScript 检查、60 条配方校验、Vite 构建和 Service Worker 生成。开发模式不注册 Service Worker；离线能力请使用生产预览或 HTTPS Pages 站点验证。
+`build` 必须依次通过 TypeScript 检查、75 条配方与材料校验、Vite 构建和 Service Worker 生成。开发模式不注册 Service Worker；离线能力请使用生产预览或 HTTPS Pages 站点验证。
 
 ## 使用
 
-- 首页选择咖啡、甜品或随机混合后抽卡。动画可以跳过，并尊重系统减少动态效果。
+- 首页选择咖啡、甜品、鸡尾酒或随机混合后抽卡。动画可以跳过，并尊重系统减少动态效果。
 - 配方图鉴支持名称、食材、风味搜索、分类、难度与收藏筛选；这些筛选也会用于下一次抽卡。
 - 详情中调整份量只换算食材，不换算温度、时间及萃取参数。大量制作请分批。
 - 收藏与动画偏好仅保存于当前浏览器；清除网站数据会移除收藏。存储失败时保留当前页面内存中的操作并提示。
@@ -38,7 +38,7 @@ Manifest 使用相对路径，包含 192、512 PNG 图标和 Apple Touch Icon。
 
 ## 添加配方
 
-编辑 `public/data/recipes.json`，类型见 `src/types.ts`。每条记录必须包含唯一稳定 ID、四类分组、份量、时间、难度、风味、器具、原料、步骤、制作参数、过敏原、插图/线稿和完整来源审核信息。
+编辑 `public/data/recipes.json`，类型见 `src/types.ts`。每条记录必须包含唯一稳定 ID、五类分组、份量、时间、难度、风味、器具、原料、步骤、制作参数、过敏原、插图/线稿和完整来源审核信息。
 
 原料使用独立 `amount` 数字和 `unit` 文本，不要将 `18g` 存成唯一数量。蛋类优先以蛋液克重表示；整数原料应在备注提供称重或取整建议。总时间应包含冷却/冷藏等待。过敏原在原料中声明并在配方中汇总。
 
@@ -46,15 +46,15 @@ Manifest 使用相对路径，包含 192、512 PNG 图标和 Apple Touch Icon。
 npm run validate
 ```
 
-校验失败会阻止发布。当前门禁固定 60 张、每组 15 张；扩充库时同步更新 `scripts/validate-recipes.mjs` 的数量门禁和来源清单。`reviewed` 表示编辑与结构审核，实际制作验证的边界必须写入 `source.reviewNote`。
+校验失败会阻止发布。当前门禁固定 75 张、每组 15 张；扩充库时同步更新 `scripts/validate-recipes.mjs` 的数量门禁和来源清单。`reviewed` 表示编辑与结构审核，实际制作验证的边界必须写入 `source.reviewNote`。
 
 ## 添加动画模板
 
-制作步骤现在使用 `RecipeStep` 对象：`id`、`title`、`description`、`scenes`。每个场景声明 `id`、`durationMs` 和对应模板参数，类型见 `src/animations/types.ts`。所有207条步骤说明保留，700个场景按实际制作顺序演示；不要在运行时猜测文字对应动作。
+制作步骤现在使用 `RecipeStep` 对象：`id`、`title`、`description`、`scenes`。每个场景声明 `id`、`durationMs` 和对应模板参数，类型见 `src/animations/types.ts`。原有207条步骤说明与700个场景保留；新增鸡尾酒步骤与场景按实际制作顺序演示；不要在运行时猜测文字对应动作。
 
 统一 `StepAnimationPlayer` 支持播放、暂停、重播、跳过及场景选择；切换步骤会停止旧时钟，隐藏标签页会暂停。动画关闭或系统减少动态时，每个动作仍可选看静态完成帧。数值是制作参数，不是动画倒计时；未注明的温度使用 `null`，避免动画额外编造工艺。
 
-24个动作在 `StepScene.tsx` 中复用 `parts.tsx` 的器具、原料与装饰。新增动作时同步扩充类型、渲染分支和 `scripts/validate-animations.mjs` 的参数门禁。`plate-present` 的 `action` 明确区分擦拭、静置、冷却、铺纸、脱模等阶段。
+原有24个动作在 `StepScene.tsx` 中复用 `parts.tsx`，新增8个调酒动作由 `CocktailScene.tsx` 实现。新增动作时同步扩充类型、渲染分支和 `src/animations/validation.js` 的参数门禁（构建脚本复用同一份）。`plate-present` 的 `action` 明确区分擦拭、静置、冷却、铺纸、脱模等阶段。
 
 成品 `artwork.finish` 由形状、颜色、层次、装饰与纹理组合；`FinishArtwork.tsx` 在首页、图鉴、详情和步骤结尾共享。30款甜品各有不同配置，不增加逐配方图片文件。
 
@@ -65,7 +65,7 @@ npm run validate
 3. 用配方的 `artwork.animationTemplate` 与 `lineArt` 引用同名文件；`artwork.image` 引用成品 SVG。
 4. `Artwork.tsx` 根据每条路径的真实长度设置描边偏移和顺序延迟。请同时测试静态展示、减少动态效果和加载失败后备。
 
-默认模板为 `coffee-cup`、`coffee-pour` 和 `dessert-outline`。整个界面不使用未经授权的成品照片。
+默认模板为 `coffee-cup`、`coffee-pour`、`dessert-outline` 和 `cocktail-outline`。整个界面不使用未经授权的成品照片。
 
 ## 授权与数据
 
@@ -85,4 +85,20 @@ npm run validate
 
 ## 验收记录
 
-见 [验收记录](docs/acceptance.md)。自动化/桌面视口检查与真机测试分别记录，未执行的浏览器或设备不标记为通过。
+见 [验收记录](docs/acceptance.md) 与 [鸡尾酒验收](docs/cocktail-acceptance.md)。自动化/桌面视口检查与真机测试分别记录，未执行的浏览器或设备不标记为通过。
+
+## 鸡尾酒与材料调酒
+
+静态库增加 15 张酒谱，来源参考与核验边界见 [鸡尾酒来源](docs/cocktail-sources.md)。IBA 原页用于核对事实性配比和方法，本站中文步骤与插画独立编写，不转载外部正文和照片；编辑核验不表示实际调酒测试。非定量原料保留原单位或明确注明家庭参考值。
+
+「材料调酒」支持分类/中文英文搜索、常用材料、已有/没有/待确认、锁定/排除、口味、器具和酒精偏好。待确认材料不能用于生成。只用已有模式过滤缺少必需材料的酒谱；可选装饰允许省略，缺失器具另行提示。少买模式按缺少必需材料数量优先排序。
+
+生成器使用有限的酸甜/气泡模板与明确基酒替换表，所有生成必需材料都来自确认库存。低酒精表示典型原料与预估稀释下估算不超过 8%；无酒精采用独立柑橘气泡/茶气泡配方。酒精度受品牌、糖类体积和融冰影响，只显示粗略估算。无法满足锁定/排除或材料要求时显示空状态，不任意拼凑。
+
+生成酒谱区分创意变体和未实测实验配方；ID 包含材料与用量，收藏或填写记录时保存完整快照。「再组合一次」轮换有限候选，不修改已保存配方。详情支持想尝试/已制作、0–5 评分、备注和实际调整；图鉴显示制作状态和评分。
+
+本地键：`ritual-favorites`、`ritual-animation`（沿用原键），`ritual-generated`、`ritual-pantry`、`ritual-records`。创意快照最多 100 张，备注和实际调整各最多 3000 字。清除浏览器网站数据会删除这些本地内容。
+
+设置页提供 JSON 导出/导入（2 MB 上限、版本 1）。导入验证材料 ID、枚举真实类型、记录引用、动态配方与动画安全，并要求生成配方匹配有限规则实际输出；全部校验通过后显示替换预览。先导出再替换；存储失败会保留本次内存状态并提示，备份请自行妥善保存。
+
+新增材料位于 `public/data/ingredients.json`，新增模板参数门禁位于 `src/animations/validation.js`，所有资源随现有 Service Worker 核心预缓存。仍无运行时第三方 API、后端或新依赖。

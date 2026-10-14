@@ -1,6 +1,6 @@
 import type { Recipe } from '../types';
 
-export type CategoryFilter = 'all' | 'coffee' | 'dessert';
+export type CategoryFilter = 'all' | 'coffee' | 'dessert' | 'cocktail';
 export type Filters = { category: CategoryFilter; difficulty: string; query: string; favoritesOnly?: boolean };
 
 /** 从原始配方筛选候选，不修改库；收藏集合只在开启收藏筛选时生效。 */
@@ -27,5 +27,5 @@ export function scaledAmount(amount: number, servings: number, originalServings:
 }
 
 export const difficultyNames: Record<string, string> = { easy: '轻松上手', medium: '稍加练习', hard: '值得挑战' };
-export const groupNames: Record<string, string> = { classic: '经典咖啡', creative: '创意咖啡', baked: '烘焙甜品', chilled: '冷藏甜品' };
+export const groupNames: Record<string, string> = { classic: '经典咖啡', creative: '创意咖啡', baked: '烘焙甜品', chilled: '冷藏甜品', cocktail: '鸡尾酒' };
 export const rarityNames: Record<string, string> = { common: '日常之选', rare: '一点新意', epic: '特别灵感', legendary: '珍藏时刻' };

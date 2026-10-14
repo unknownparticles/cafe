@@ -1,0 +1,102 @@
+/* Cocktail additions reuse the paper palette; inventory stays separate from the mobile card. */
+.art-cocktail { --art: #e4e8d9; }
+.tile-record { display: inline-block; font-size: 10px; color: #657254; margin-bottom: 10px; }
+.draw-page .notice.storage-notice { position: relative; width: auto; height: auto; padding: 12px 20px; margin: 12px 24px; overflow: visible; clip: auto; white-space: normal; }
+.home-bar-entry { margin: 30px 26px 0; padding: 26px; border: 1px solid var(--border); border-radius: 7px; background: #e9eada; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.home-bar-entry h2 { font-size: 25px; font-weight: 500; margin: 0 0 10px; }
+.home-bar-entry p { font-size: 12px; color: var(--muted); margin-bottom: 0; }
+.home-bar-entry .eyebrow { margin-bottom: 10px; }
+.home-bar-entry .primary { flex-shrink: 0; }
+.pantry-page { padding: 48px 26px 60px; }
+.pantry-layout { display: grid; grid-template-columns: minmax(270px, 340px) minmax(0, 1fr); gap: 30px; align-items: start; }
+.pantry-panel { background: #fcf9f2; border: 1px solid var(--border); padding: 20px; border-radius: 7px; margin-bottom: 20px; }
+.pantry-panel h2 { font-size: 22px; font-weight: 500; margin: 0 0 12px; }
+.pantry-panel h3 { font-size: 13px; margin: 24px 0 12px; }
+.pantry-panel .section-row { gap: 8px; flex-wrap: wrap; }
+.pantry-panel .section-row span { font-size: 10px; color: var(--muted); }
+.pantry-panel .search-field { min-width: 0; margin: 18px 0 10px; }
+.pantry-filter-row { display: flex; gap: 8px; }
+.pantry-filter-row .select-field { min-width: 0; flex: 1; }
+.pantry-filter-row select { width: 100%; padding-right: 10px; }
+.pantry-filter-row .filter-favorite { padding: 0 10px; }
+.ingredient-picker { max-height: 530px; overflow: auto; margin-top: 12px; padding-right: 4px; scrollbar-width: thin; }
+.stock-item { display: grid; grid-template-columns: minmax(0, 1fr) 80px; gap: 4px 8px; align-items: center; border-bottom: 1px dashed var(--border); padding: 11px 0 7px; }
+.stock-item strong { display: block; font-size: 12px; font-weight: 500; }
+.stock-item small { display: block; font-size: 9px; color: var(--muted); }
+.stock-item select, .pantry-select select, .notes-controls select { min-height: 44px; background: #fffaf2; border: 1px solid var(--border); color: var(--ink); border-radius: 4px; font-size: 12px; padding: 0 8px; width: 100%; }
+.stock-actions { display: flex; gap: 5px; grid-column: 1 / -1; }
+.stock-actions button { font-size: 10px; min-height: 44px; padding: 0 11px; border-radius: 4px; }
+.stock-actions button[aria-pressed="true"] { background: #e4e8d9; color: #536347; }
+.stock-item.excluded strong { text-decoration: line-through; color: var(--muted); }
+.preference-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.preference-chips button { border: 1px solid var(--border); border-radius: 4px; min-height: 44px; padding: 8px 12px; font-size: 11px; }
+.preference-chips button[aria-pressed="true"] { background: #e3e8d7; border-color: #9da785; }
+.pantry-select { display: grid; gap: 8px; font-size: 12px; margin-top: 20px; }
+.pantry-results .section-heading { margin-bottom: 12px; gap: 16px; }
+.pantry-results > .fine-print { margin-bottom: 20px; }
+.pantry-results .notice { margin: 0 0 20px; }
+.pantry-results .section-heading > .muted { font-size: 11px; white-space: nowrap; }
+.cocktail-results-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.cocktail-result { border: 1px solid var(--border); background: #fcf9f2; border-radius: 7px; overflow: hidden; }
+.cocktail-result-art { width: 100%; height: 165px; background: #e4e8d9; display: flex; align-items: center; justify-content: center; }
+.cocktail-result-art .finish-artwork { height: 100%; width: 100%; }
+.cocktail-result-body { padding: 16px; }
+.cocktail-result-body .tile-title { font-size: 19px; margin: 4px 0 8px; }
+.cocktail-result-body p { font-size: 10px; color: var(--muted); margin: 9px 0; line-height: 1.8; }
+.cocktail-result-body small { font-size: 9px; color: var(--muted); }
+.cocktail-kind { display: inline-block; font-size: 10px; color: #657254; }
+.match-status { display: inline-block; font-size: 10px; padding: 5px 8px; background: #e6eada; border-radius: 3px; color: #536347; }
+.match-status.missing { background: #eee2d1; color: #8a6349; }
+.cocktail-result-body .missing-list { color: #8a6349; }
+.cocktail-result-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; border-top: 1px solid var(--border); margin-top: 12px; padding-top: 4px; font-size: 9px; color: var(--muted); }
+.cocktail-result-actions .text-button { font-size: 10px; flex-shrink: 0; }
+.creative-heading { margin-top: 40px; }
+.creative-heading .filter-favorite { flex-shrink: 0; padding: 0 12px; }
+.pantry-empty { padding: 22px; border: 1px dashed var(--border); border-radius: 7px; }
+.pantry-empty h3 { font-size: 17px; font-weight: 500; }
+.pantry-empty p { font-size: 12px; color: var(--muted); }
+.cocktail-detail-info { border-left: 3px solid #9aa880; padding: 12px 16px; background: #edf0e3; margin-top: 20px; }
+.cocktail-detail-info p { font-size: 12px; margin: 10px 0 0; }
+.cocktail-detail-info .fine-print { font-size: 10px; }
+.making-notes { border-top: 1px solid var(--border); margin-bottom: 26px; }
+.making-notes label { display: grid; gap: 8px; font-size: 12px; margin: 14px 0; }
+.notes-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.making-notes textarea { width: 100%; min-height: 65px; resize: vertical; background: #fffaf2; border: 1px solid var(--border); border-radius: 4px; color: var(--ink); padding: 10px; font: inherit; line-height: 1.8; }
+.backup-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.backup-preview { padding: 16px; background: #e7eadc; margin-top: 20px; border-radius: 4px; }
+.backup-preview .text-button { margin-left: 16px; }
+@media (max-width: 1000px) { .pantry-layout { gap: 20px; grid-template-columns: 280px minmax(0, 1fr); } .cocktail-results-grid { grid-template-columns: 1fr; } }
+@media (max-width: 720px) {
+  /* A second navigation row keeps all four destinations readable on narrow phones. */
+  .site-header { display: grid; grid-template-columns: minmax(0, 1fr) 44px; grid-template-rows: 42px 44px; height: calc(100px + env(safe-area-inset-top)); padding: calc(7px + env(safe-area-inset-top)) 20px 7px; gap: 0; }
+  .site-header .brand { grid-column: 1; grid-row: 1; }
+  .site-header .settings-link { grid-column: 2; grid-row: 1; padding: 0; }
+  .site-header nav { grid-column: 1 / -1; grid-row: 2; width: 100%; margin: 0; justify-content: space-between; gap: 8px; }
+  .site-header nav a { font-size: 11px; }
+  .draw-page .hero { height: calc(100svh - 148px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); }
+  .draw-page .mode-selector { gap: 5px; }
+  .draw-page .mode-selector button { font-size: 9px; padding: 5px 4px; gap: 3px; }
+  .draw-page .mode-selector .ritual-icon { width: 12px; }
+  .home-bar-entry { margin: 26px 20px 0; padding: 22px; flex-direction: column; align-items: start; gap: 18px; }
+  .home-bar-entry h2 { font-size: 23px; }
+  .pantry-page { padding: 30px 20px 40px; }
+  .pantry-layout { grid-template-columns: 1fr; gap: 20px; }
+  .ingredient-picker { max-height: 390px; }
+  .pantry-panel { padding: 18px; }
+  .stock-item { grid-template-columns: minmax(0, 1fr) 90px; }
+  .cocktail-results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .cocktail-result-art { height: 140px; }
+  .cocktail-result-body { padding: 12px; }
+  .cocktail-result-body .tile-title { font-size: 17px; }
+  .cocktail-result-body .tile-title span { display: none; }
+  .cocktail-result-actions { flex-wrap: wrap; gap: 0; }
+  .pantry-results .section-heading h2 { font-size: 22px; }
+  .creative-heading { align-items: start; flex-wrap: wrap; }
+}
+@media (max-width: 370px) { .cocktail-results-grid { grid-template-columns: 1fr; } }
+@media (orientation: landscape) and (max-height: 520px) {
+  .site-header { display: flex; height: 58px; padding: 0 24px; gap: 14px; }
+  .site-header nav { width: auto; margin-left: auto; }
+  .site-header .brand { font-size: 18px; }
+  .draw-page .hero { height: calc(100svh - 102px); }
+}

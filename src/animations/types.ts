@@ -1,7 +1,7 @@
 /** Shared shape vocabulary keeps recipe-specific artwork declarative and small. */
 export type Vessel = 'cup' | 'glass' | 'bowl' | 'mold' | 'pot' | 'filter' | 'press';
 export type IngredientShape = 'bean' | 'ice' | 'sugar' | 'flour' | 'spice' | 'chocolate' | 'fruit' | 'liquid';
-export type FinishShape = 'espresso' | 'latte' | 'iced' | 'filter' | 'cookie' | 'brownie' | 'loaf' | 'muffin' | 'scone' | 'crumble' | 'cheesecake' | 'madeleine' | 'financier' | 'tart' | 'pear' | 'pudding' | 'jelly' | 'mousse' | 'layered' | 'oats' | 'rice' | 'sago' | 'round-cake' | 'square-cake';
+export type FinishShape = 'espresso' | 'latte' | 'iced' | 'filter' | 'cookie' | 'brownie' | 'loaf' | 'muffin' | 'scone' | 'crumble' | 'cheesecake' | 'madeleine' | 'financier' | 'tart' | 'pear' | 'pudding' | 'jelly' | 'mousse' | 'layered' | 'oats' | 'rice' | 'sago' | 'round-cake' | 'square-cake' | 'coupe' | 'highball' | 'rocks';
 export type Garnish = 'none' | 'heart' | 'rosetta' | 'foam' | 'cocoa' | 'cinnamon' | 'sesame' | 'walnut' | 'almond' | 'chocolate' | 'raisin' | 'lemon' | 'orange' | 'strawberry' | 'mango' | 'blueberry' | 'osmanthus' | 'coconut' | 'peanut' | 'tea';
 
 /** Colors and layers describe the actual recipe; no per-recipe SVG file is needed. */
@@ -16,6 +16,14 @@ export interface FinishConfig {
 
 export interface SceneContext { vessel: Vessel; color: string; label: string }
 type SceneParams = {
+  'cocktail-shake': Record<string, never>;
+  'cocktail-stir': Record<string, never>;
+  'cocktail-strain': Record<string, never>;
+  'cocktail-layer': { layers: string[] };
+  'cocktail-add-ice': { iceCount: number };
+  'cocktail-top-up': { amount: number };
+  'cocktail-garnish': { garnish: Garnish };
+  'cocktail-reveal': Record<string, never>;
   'ingredient-drop': { ingredient: IngredientShape };
   'measure-pour': { amount: number; unit: 'g' | 'ml' };
   'mix-stir': { tool: 'spoon' | 'whisk' | 'spatula' | 'blender' };

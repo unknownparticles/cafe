@@ -5,9 +5,9 @@ import { validateFinish, validateStep } from './validate-animations.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const publicRoot = resolve(root, 'public');
-const groups = ['classic', 'creative', 'baked', 'chilled'];
-const templates = ['coffee-cup', 'coffee-pour', 'dessert-outline'];
-// The library uses weight and volume only; household spoon sizes are not consistent.
+const groups = ['classic', 'creative', 'baked', 'chilled', 'cocktail'];
+const templates = ['coffee-cup', 'coffee-pour', 'dessert-outline', 'cocktail-outline'];
+// Existing coffee/dessert quantities use weight and volume; cocktails retain reference units.
 const ingredientUnits = ['g', 'ml'];
 const nonempty = value => typeof value === 'string' && value.trim().length > 0;
 const positive = value => typeof value === 'number' && Number.isFinite(value) && value > 0;
@@ -15,10 +15,23 @@ const strings = (value, allowEmpty = false) => Array.isArray(value) && (allowEmp
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 
 /** Return actionable errors without throwing on malformed imported records. */
-export function validateRecipes(recipes, { checkAssets = true } = {}) {
+export function validateRecipes(recipes, { checkAssets = true, dictionary = JSON.parse(readFileSync(resolve(publicRoot, 'data/ingredients.json'), 'utf8')) } = {}) {
   const errors = [];
   if (!Array.isArray(recipes)) return ['配方库必须是数组'];
-  if (recipes.length !== 60) errors.push(`配方应有 60 条，实际 ${recipes.length} 条`);
+  if (recipes.length !== 75) errors.push(`配方应有 75 条，实际 ${recipes.length} 条`);
+  const materialIds = new Set();
+  const materialNames = new Map();
+  for (const item of dictionary) {
+    if (!object(item) || !nonempty(item.id) || !nonempty(item.name) || !nonempty(item.category) || !['base', 'liqueur', 'acid', 'sweet', 'mixer', 'garnish', 'other'].includes(item.role) || !Array.isArray(item.aliases) || !item.aliases.every(nonempty) || !/^#[0-9a-f]{6}$/i.test(item.color) || !Number.isFinite(item.abv) || item.abv < 0 || item.abv > 100) { errors.push('材料字典条目缺失或无效'); continue; }
+    if (materialIds.has(item.id)) errors.push(`重复材料 ID：${item.id}`);
+    materialIds.add(item.id);
+    for (const name of [item.id, item.name, ...item.aliases]) {
+      const key = name.toLocaleLowerCase();
+      // Repeating an ID as its own English alias is harmless; cross-material aliases are ambiguous.
+      if (materialNames.has(key) && materialNames.get(key) !== item.id) errors.push(`重复材料名或别名：${name}`);
+      materialNames.set(key, item.id);
+    }
+  }
   const ids = new Set();
   const stepIds = new Set();
   const dessertFinishes = new Set();
@@ -31,10 +44,10 @@ export function validateRecipes(recipes, { checkAssets = true } = {}) {
     require(typeof recipe.id === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(recipe.id), 'id 必须是稳定的小写标识');
     require(!ids.has(recipe.id), 'id 重复');
     ids.add(recipe.id);
-    require(['coffee', 'dessert'].includes(recipe.category), 'category 无效');
+    require(['coffee', 'dessert', 'cocktail'].includes(recipe.category), 'category 无效');
     require(groups.includes(recipe.group), 'group 无效');
     if (groups.includes(recipe.group)) counts[recipe.group]++;
-    require((['classic', 'creative'].includes(recipe.group) && recipe.category === 'coffee') || (['baked', 'chilled'].includes(recipe.group) && recipe.category === 'dessert'), 'category 与 group 不一致');
+    require((['classic', 'creative'].includes(recipe.group) && recipe.category === 'coffee') || (['baked', 'chilled'].includes(recipe.group) && recipe.category === 'dessert') || (recipe.group === 'cocktail' && recipe.category === 'cocktail'), 'category 与 group 不一致');
     require(['common', 'rare', 'epic', 'legendary'].includes(recipe.rarity), 'rarity 无效');
     require(['easy', 'medium', 'hard'].includes(recipe.difficulty), 'difficulty 无效');
     require(Number.isInteger(recipe.servings) && recipe.servings > 0, 'servings 必须是正整数');
@@ -55,7 +68,12 @@ export function validateRecipes(recipes, { checkAssets = true } = {}) {
     if (Array.isArray(recipe.ingredients)) recipe.ingredients.forEach((ingredient, i) => {
       if (!object(ingredient)) { require(false, `原料 ${i + 1} 必须是对象`); return; }
       require(nonempty(ingredient.name) && nonempty(ingredient.unit) && positive(ingredient.amount), `原料 ${i + 1} 的名称、正数用量、单位必填`);
-      require(ingredientUnits.includes(ingredient.unit), `原料 ${i + 1} 单位只支持 g 或 ml`);
+      require((recipe.category === 'cocktail' ? ['g', 'ml', 'dash', '片', '颗', '块', '枝', '茶匙', '吧匙'] : ingredientUnits).includes(ingredient.unit), `原料 ${i + 1} 单位无效`);
+      if (recipe.category === 'cocktail') {
+        require(materialIds.has(ingredient.ingredientId), `原料 ${i + 1} 未引用材料字典`);
+        require(dictionary.find(item => item.id === ingredient.ingredientId)?.abv === ingredient.abv, `原料 ${i + 1} 酒精度与字典不一致`);
+        require(ingredient.optional === undefined || typeof ingredient.optional === 'boolean', `原料 ${i + 1} optional 无效`);
+      }
       if (ingredient.note !== undefined) require(nonempty(ingredient.note), `原料 ${i + 1} note 不能为空`);
       if (ingredient.allergens !== undefined) {
         require(strings(ingredient.allergens, true), `原料 ${i + 1} allergens 无效`);
@@ -77,6 +95,7 @@ export function validateRecipes(recipes, { checkAssets = true } = {}) {
         dessertFinishes.add(signature);
       }
       require(templates.includes(artwork.animationTemplate), 'animationTemplate 无效');
+      if (recipe.category === 'cocktail') require(artwork.animationTemplate === 'cocktail-outline', '鸡尾酒模板不一致');
       require(artwork.animationTemplate === (recipe.category === 'dessert' ? 'dessert-outline' : artwork.animationTemplate) && (recipe.category !== 'coffee' || ['coffee-cup', 'coffee-pour'].includes(artwork.animationTemplate)), '动画模板与分类不一致');
       for (const key of ['image', 'lineArt']) {
         const path = artwork[key];
@@ -99,8 +118,19 @@ export function validateRecipes(recipes, { checkAssets = true } = {}) {
       require(source.reviewStatus === 'reviewed', '配方来源必须完成编辑审核');
       const date = source.lastVerifiedAt;
       require(typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(Date.parse(date)) && new Date(date).toISOString().slice(0, 10) === date, 'lastVerifiedAt 必须是有效日期');
-      if (source.sourceType === 'original') require(source.sourceUrl === 'docs/recipe-sources.md' && existsSync(resolve(root, source.sourceUrl)), '原创来源说明文件不存在');
+      if (source.sourceType === 'original') require(['docs/recipe-sources.md', 'docs/cocktail-sources.md'].includes(source.sourceUrl) && existsSync(resolve(root, source.sourceUrl)), '原创来源说明文件不存在');
       else require(typeof source.sourceUrl === 'string' && /^https:\/\//.test(source.sourceUrl), '外部来源必须提供 HTTPS URL');
+    }
+    if (recipe.category === 'cocktail') {
+      const info = recipe.cocktail;
+      require(object(info), '鸡尾酒专属信息必填');
+      if (object(info)) {
+        require(info.kind === 'classic' && info.tested === false, '静态酒谱为经典参考，不能标注实测');
+        require(['shake', 'stir', 'build', 'layer'].includes(info.method) && nonempty(info.glassware) && nonempty(info.ice) && strings(info.baseSpirits, true), '杯型、方法、基酒与冰信息无效');
+        require(Number.isFinite(info.dilutionMl) && info.dilutionMl >= 0 && (info.estimatedAbv === null || Number.isFinite(info.estimatedAbv) && info.estimatedAbv >= 0 && info.estimatedAbv <= 100), '稀释量或估算酒精度无效');
+        require(info.baseSpirits.every(id => recipe.ingredients.some(item => item.ingredientId === id) && dictionary.find(item => item.id === id)?.role === 'base'), '基酒必须引用本配方中的基酒材料');
+      }
+      require(object(source) && /^https:\/\/iba-world\.com\/iba-cocktail\/[a-z-]+\/$/.test(source.referenceUrl) && source.referenceLicenseStatus === 'review_required' && source.imageLicenseStatus === 'original', '鸡尾酒必须记录核验参考和独立素材许可状态');
     }
   });
   for (const group of groups) if (counts[group] !== 15) errors.push(`${group} 应有 15 条，实际 ${counts[group]} 条`);
@@ -114,6 +144,6 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     const recipes = JSON.parse(readFileSync(resolve(publicRoot, 'data/recipes.json'), 'utf8'));
     const errors = validateRecipes(recipes);
     if (errors.length) { console.error(errors.join('\n')); process.exitCode = 1; }
-    else console.log(`已验证 ${recipes.length} 条配方：经典咖啡 15、创意咖啡 15、烘焙甜点 15、冷藏甜点 15。`);
+    else console.log(`已验证 ${recipes.length} 条配方：经典咖啡 15、创意咖啡 15、烘焙甜点 15、冷藏甜点 15、鸡尾酒 15；材料引用与动画参数通过。`);
   } catch (error) { console.error(`读取配方失败：${error.message}`); process.exitCode = 1; }
 }

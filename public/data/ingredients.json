@@ -1,0 +1,457 @@
+[
+  {
+    "id": "rum",
+    "name": "白朗姆酒",
+    "aliases": [
+      "white rum",
+      "white cuban ron"
+    ],
+    "category": "基酒",
+    "role": "base",
+    "abv": 40,
+    "color": "#e1cf9f"
+  },
+  {
+    "id": "gin",
+    "name": "金酒",
+    "aliases": [
+      "gin",
+      "杜松子酒"
+    ],
+    "category": "基酒",
+    "role": "base",
+    "abv": 40,
+    "color": "#c4d4c1"
+  },
+  {
+    "id": "vodka",
+    "name": "伏特加",
+    "aliases": [
+      "vodka"
+    ],
+    "category": "基酒",
+    "role": "base",
+    "abv": 40,
+    "color": "#dce1d4"
+  },
+  {
+    "id": "tequila",
+    "name": "龙舌兰酒",
+    "aliases": [
+      "tequila"
+    ],
+    "category": "基酒",
+    "role": "base",
+    "abv": 40,
+    "color": "#d7c899"
+  },
+  {
+    "id": "bourbon",
+    "name": "波本威士忌",
+    "aliases": [
+      "bourbon",
+      "bourbon whiskey"
+    ],
+    "category": "基酒",
+    "role": "base",
+    "abv": 40,
+    "color": "#b87836"
+  },
+  {
+    "id": "campari",
+    "name": "金巴利苦味酒",
+    "aliases": [
+      "campari"
+    ],
+    "category": "调味酒",
+    "role": "liqueur",
+    "abv": 25,
+    "color": "#b7493a"
+  },
+  {
+    "id": "sweet-vermouth",
+    "name": "甜红味美思",
+    "aliases": [
+      "sweet red vermouth"
+    ],
+    "category": "调味酒",
+    "role": "liqueur",
+    "abv": 16,
+    "color": "#945341",
+    "allergens": [
+      "亚硫酸盐"
+    ]
+  },
+  {
+    "id": "dry-vermouth",
+    "name": "干味美思",
+    "aliases": [
+      "dry vermouth"
+    ],
+    "category": "调味酒",
+    "role": "liqueur",
+    "abv": 18,
+    "color": "#d8cd97",
+    "allergens": [
+      "亚硫酸盐"
+    ]
+  },
+  {
+    "id": "triple-sec",
+    "name": "橙味利口酒",
+    "aliases": [
+      "triple sec"
+    ],
+    "category": "调味酒",
+    "role": "liqueur",
+    "abv": 40,
+    "color": "#d8b565"
+  },
+  {
+    "id": "coffee-liqueur",
+    "name": "咖啡利口酒",
+    "aliases": [
+      "kahlúa",
+      "kahlua"
+    ],
+    "category": "调味酒",
+    "role": "liqueur",
+    "abv": 20,
+    "color": "#6d4230"
+  },
+  {
+    "id": "angostura",
+    "name": "安格式苦精",
+    "aliases": [
+      "angostura bitters"
+    ],
+    "category": "苦味与调味",
+    "role": "liqueur",
+    "abv": 44.7,
+    "color": "#945739"
+  },
+  {
+    "id": "lime-juice",
+    "name": "青柠汁",
+    "aliases": [
+      "lime juice",
+      "fresh lime juice",
+      "莱姆汁"
+    ],
+    "category": "水果与果汁",
+    "role": "acid",
+    "abv": 0,
+    "color": "#c4d19d"
+  },
+  {
+    "id": "lemon-juice",
+    "name": "柠檬汁",
+    "aliases": [
+      "lemon juice"
+    ],
+    "category": "水果与果汁",
+    "role": "acid",
+    "abv": 0,
+    "color": "#e2d29a"
+  },
+  {
+    "id": "orange-juice",
+    "name": "橙汁",
+    "aliases": [
+      "orange juice"
+    ],
+    "category": "水果与果汁",
+    "role": "mixer",
+    "abv": 0,
+    "color": "#e0ac56"
+  },
+  {
+    "id": "grapefruit-juice",
+    "name": "葡萄柚汁",
+    "aliases": [
+      "grapefruit juice"
+    ],
+    "category": "水果与果汁",
+    "role": "mixer",
+    "abv": 0,
+    "color": "#dc9d8d"
+  },
+  {
+    "id": "pineapple-juice",
+    "name": "菠萝汁",
+    "aliases": [
+      "pineapple juice"
+    ],
+    "category": "水果与果汁",
+    "role": "mixer",
+    "abv": 0,
+    "color": "#ddc774"
+  },
+  {
+    "id": "lime",
+    "name": "青柠",
+    "aliases": [
+      "lime",
+      "莱姆"
+    ],
+    "category": "水果与果汁",
+    "role": "other",
+    "abv": 0,
+    "color": "#9ca36b"
+  },
+  {
+    "id": "soda",
+    "name": "苏打水",
+    "aliases": [
+      "soda water",
+      "气泡水"
+    ],
+    "category": "软饮与气泡",
+    "role": "mixer",
+    "abv": 0,
+    "color": "#d2ded4",
+    "carbonated": true
+  },
+  {
+    "id": "ginger-beer",
+    "name": "无酒精姜汁汽水",
+    "aliases": [
+      "ginger beer"
+    ],
+    "category": "软饮与气泡",
+    "role": "mixer",
+    "abv": 0,
+    "color": "#d8bd82",
+    "carbonated": true
+  },
+  {
+    "id": "cola",
+    "name": "可乐",
+    "aliases": [
+      "cola"
+    ],
+    "category": "软饮与气泡",
+    "role": "mixer",
+    "abv": 0,
+    "color": "#704732",
+    "carbonated": true
+  },
+  {
+    "id": "grapefruit-soda",
+    "name": "粉红葡萄柚汽水",
+    "aliases": [
+      "pink grapefruit soda"
+    ],
+    "category": "软饮与气泡",
+    "role": "mixer",
+    "abv": 0,
+    "color": "#d5a094",
+    "carbonated": true
+  },
+  {
+    "id": "tonic",
+    "name": "汤力水",
+    "aliases": [
+      "tonic water"
+    ],
+    "category": "软饮与气泡",
+    "role": "mixer",
+    "abv": 0,
+    "color": "#d0d6ad",
+    "carbonated": true
+  },
+  {
+    "id": "syrup",
+    "name": "原味糖浆",
+    "aliases": [
+      "simple syrup",
+      "sugar syrup"
+    ],
+    "category": "糖与甜味剂",
+    "role": "sweet",
+    "abv": 0,
+    "color": "#e3d5ae"
+  },
+  {
+    "id": "sugar",
+    "name": "细砂糖",
+    "aliases": [
+      "superfine sugar",
+      "white cane sugar"
+    ],
+    "category": "糖与甜味剂",
+    "role": "sweet",
+    "abv": 0,
+    "color": "#e5ddca"
+  },
+  {
+    "id": "sugar-cube",
+    "name": "方糖",
+    "aliases": [
+      "sugar cube"
+    ],
+    "category": "糖与甜味剂",
+    "role": "sweet",
+    "abv": 0,
+    "color": "#e5ddca"
+  },
+  {
+    "id": "grenadine",
+    "name": "石榴糖浆",
+    "aliases": [
+      "grenadine syrup"
+    ],
+    "category": "糖与甜味剂",
+    "role": "sweet",
+    "abv": 0,
+    "color": "#b64e4c"
+  },
+  {
+    "id": "salt",
+    "name": "盐",
+    "aliases": [
+      "salt"
+    ],
+    "category": "苦味与调味",
+    "role": "other",
+    "abv": 0,
+    "color": "#e0d9c9"
+  },
+  {
+    "id": "mint",
+    "name": "薄荷",
+    "aliases": [
+      "mint",
+      "mint sprigs"
+    ],
+    "category": "香草与装饰",
+    "role": "garnish",
+    "abv": 0,
+    "color": "#82966b"
+  },
+  {
+    "id": "orange-slice",
+    "name": "橙片",
+    "aliases": [
+      "orange slice"
+    ],
+    "category": "香草与装饰",
+    "role": "garnish",
+    "abv": 0,
+    "color": "#d29a4f"
+  },
+  {
+    "id": "lemon-slice",
+    "name": "柠檬片",
+    "aliases": [
+      "lemon slice"
+    ],
+    "category": "香草与装饰",
+    "role": "garnish",
+    "abv": 0,
+    "color": "#d9bf6b"
+  },
+  {
+    "id": "lime-slice",
+    "name": "青柠片",
+    "aliases": [
+      "lime wedge",
+      "lime slice"
+    ],
+    "category": "香草与装饰",
+    "role": "garnish",
+    "abv": 0,
+    "color": "#99a568"
+  },
+  {
+    "id": "lemon-peel",
+    "name": "柠檬皮",
+    "aliases": [
+      "lemon zest",
+      "lemon peel"
+    ],
+    "category": "香草与装饰",
+    "role": "garnish",
+    "abv": 0,
+    "color": "#d9bf6b"
+  },
+  {
+    "id": "orange-peel",
+    "name": "橙皮",
+    "aliases": [
+      "orange zest",
+      "orange peel"
+    ],
+    "category": "香草与装饰",
+    "role": "garnish",
+    "abv": 0,
+    "color": "#d29a4f"
+  },
+  {
+    "id": "cherry",
+    "name": "鸡尾酒樱桃",
+    "aliases": [
+      "maraschino cherry"
+    ],
+    "category": "香草与装饰",
+    "role": "garnish",
+    "abv": 0,
+    "color": "#b15347"
+  },
+  {
+    "id": "coffee-beans",
+    "name": "咖啡豆",
+    "aliases": [
+      "coffee beans"
+    ],
+    "category": "香草与装饰",
+    "role": "garnish",
+    "abv": 0,
+    "color": "#704732"
+  },
+  {
+    "id": "ice",
+    "name": "冰块",
+    "aliases": [
+      "ice",
+      "ice cubes"
+    ],
+    "category": "其他",
+    "role": "other",
+    "abv": 0,
+    "color": "#d3e0dc"
+  },
+  {
+    "id": "water",
+    "name": "饮用水",
+    "aliases": [
+      "plain water"
+    ],
+    "category": "其他",
+    "role": "other",
+    "abv": 0,
+    "color": "#d3e0dc"
+  },
+  {
+    "id": "espresso",
+    "name": "浓缩咖啡",
+    "aliases": [
+      "espresso"
+    ],
+    "category": "其他",
+    "role": "other",
+    "abv": 0,
+    "color": "#714930"
+  },
+  {
+    "id": "tea",
+    "name": "冷却的无糖茶",
+    "aliases": [
+      "tea"
+    ],
+    "category": "其他",
+    "role": "other",
+    "abv": 0,
+    "color": "#b59263"
+  }
+]

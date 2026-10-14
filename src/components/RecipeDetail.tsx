@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import type { Recipe } from '../types';
+import type { MakingRecord, Recipe } from '../types';
+import { MakingNotes } from './MakingNotes';
+import { cocktailKindNames } from '../services/cocktails';
 import { difficultyNames, groupNames, scaledAmount } from '../services/recipes';
 import { FinishArtwork } from '../animations/FinishArtwork';
 import { StepAnimationPlayer } from '../animations/StepAnimationPlayer';
 
 /** 原生 dialog 提供焦点限制和 Escape；份量变化只影响原料展示。 */
-export function RecipeDetail({ recipe, favorite, onFavorite, onClose, staticMode }: { recipe: Recipe; favorite: boolean; onFavorite: () => void; onClose: () => void; staticMode: boolean }) {
+export function RecipeDetail({ recipe, favorite, onFavorite, onClose, staticMode, record, onRecordChange, parentName }: { recipe: Recipe; favorite: boolean; onFavorite: () => void; onClose: () => void; staticMode: boolean; record?: MakingRecord; onRecordChange: (value: MakingRecord) => void; parentName?: string }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [servings, setServings] = useState(recipe.servings);
   const [stepIndex, setStepIndex] = useState(0);
@@ -28,9 +30,10 @@ export function RecipeDetail({ recipe, favorite, onFavorite, onClose, staticMode
     <div className="detail-body">
       <p className="eyebrow">A LITTLE RECIPE FOR YOUR DAY</p>
       <h2 id="recipe-title">{recipe.name}</h2><p className="muted">{recipe.description}</p>
+      {recipe.cocktail && <div className="cocktail-detail-info"><span className="cocktail-kind">{cocktailKindNames[recipe.cocktail.kind]}</span><p>{recipe.cocktail.glassware} · {recipe.cocktail.ice} · {recipe.cocktail.estimatedAbv === null ? '酒精度未估算' : `酒精度估算 ${recipe.cocktail.estimatedAbv}%`}</p>{parentName && <p>参考骨架：{parentName}，此变体已单独调整材料和比例。</p>}<p className="fine-print">酒精度按典型原料和预估稀释量计算，品牌与融冰会改变结果。此酒谱尚未实测。{recipe.ingredients.some(item => (item.abv ?? 0) > 0) && '含酒精饮品仅供达到当地法定饮酒年龄者，饮酒后不要驾驶。'}</p></div>}
       <div className="detail-meta"><span>◷ 总计 {recipe.totalTimeMinutes} 分钟</span><span>准备 {recipe.prepTimeMinutes} 分钟</span><span>{difficultyNames[recipe.difficulty]}</span></div>
       <div className="section-row"><h3>准备食材</h3><div className="servings"><button onClick={() => setServings(Math.max(1, servings - 1))} disabled={servings <= 1} aria-label="减少份量">−</button><output aria-live="polite">{servings} 份</output><button onClick={() => setServings(Math.min(24, servings + 1))} disabled={servings >= 24} aria-label="增加份量">+</button></div></div>
-      <ul className="ingredients">{recipe.ingredients.map((item, index) => <li key={index}><span>{item.name}{item.note && <small>{item.note}</small>}</span><strong>{scaledAmount(item.amount, servings, recipe.servings)} <span>{item.unit}</span></strong></li>)}</ul>
+      <ul className="ingredients">{recipe.ingredients.map((item, index) => <li key={index}><span>{item.name}{item.optional && <small>可选 · 缺少可省略</small>}{item.note && <small>{item.note}</small>}</span><strong>{scaledAmount(item.amount, servings, recipe.servings)} <span>{item.unit}</span></strong></li>)}</ul>
       <p className="fine-print">原配方为 {recipe.servings} 份。份量调整只换算食材；温度、时间与萃取参数保持原值，增量制作请分批操作。</p>
       <section className="recipe-steps-section" aria-label="制作步骤动画">
         <div className="step-guide-heading"><h3>一步一步，慢慢来</h3><span className="step-position">{stepIndex + 1} / {recipe.steps.length}</span></div>
@@ -41,7 +44,8 @@ export function RecipeDetail({ recipe, favorite, onFavorite, onClose, staticMode
       </section>
       <h3>器具与制作参数</h3><p className="muted">{recipe.equipment.join(' · ')}</p><dl className="parameters">{recipe.parameters.map((item, index) => <div key={index}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl>
       <div className="allergen-note"><strong>过敏原提示</strong><p>{recipe.allergens.length ? recipe.allergens.join('、') : '配方未包含常见过敏原，请仍检查原料包装及交叉接触。'}</p></div>
-      <details className="source"><summary>配方来源与审核说明</summary><p>{recipe.source.sourceName} · {recipe.source.lastVerifiedAt}</p><p>{recipe.source.license}</p><p>{recipe.source.reviewNote}</p><p>{recipe.source.attribution}</p></details>
+      <details className="source"><summary>配方来源与审核说明</summary><p>{recipe.source.sourceName} · {recipe.source.lastVerifiedAt}</p><p>{recipe.source.license}</p><p>{recipe.source.reviewNote}</p><p>{recipe.source.attribution}</p>{recipe.source.referenceUrl && /^https:\/\/iba-world\.com\//.test(recipe.source.referenceUrl) && <p><a href={recipe.source.referenceUrl} target="_blank" rel="noreferrer">查阅 IBA 配方参考 ↗</a> · 外部正文与图片未转载</p>}</details>
+      <MakingNotes record={record} onChange={onRecordChange} />
       <button className={`primary full ${favorite ? 'saved' : ''}`} onClick={onFavorite}>{favorite ? '♥ 已收藏 · 点击取消' : '♡ 收藏这份小美好'}</button>
     </div>
   </dialog>;

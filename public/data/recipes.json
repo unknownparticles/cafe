@@ -14225,5 +14225,3426 @@
       "lastVerifiedAt": "2026-10-14",
       "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
     }
+  },
+  {
+    "id": "cocktail-daiquiri",
+    "name": "代基里",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "rare",
+    "description": "代基里是一杯以白朗姆酒为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "medium",
+    "flavorTags": [
+      "清爽",
+      "酸"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙",
+      "摇酒壶",
+      "滤冰器"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "rum",
+        "name": "白朗姆酒",
+        "amount": 60,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "lime-juice",
+        "name": "青柠汁",
+        "amount": 20,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "sugar",
+        "name": "细砂糖",
+        "amount": 2,
+        "unit": "吧匙",
+        "abv": 0,
+        "note": "IBA 原文为 2 吧匙；先搅拌至完全溶解。"
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-daiquiri-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。把细砂糖与酒和青柠汁搅拌至溶解。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e1cf9f",
+              "label": "量取原料",
+              "amount": 60,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#c4d19d",
+              "label": "量取原料",
+              "amount": 20,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-daiquiri-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#dbd39b",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-daiquiri-step-3",
+        "title": "摇和与过滤",
+        "description": "加入除气泡饮料和装饰外的原料，盖紧摇酒壶，摇约 10–15 秒至壶外变冷；使用滤冰器倒入预冷酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-shake",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#dbd39b",
+              "label": "摇和降温"
+            }
+          },
+          {
+            "id": "cocktail-strain",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#dbd39b",
+              "label": "过滤倒酒"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-daiquiri-step-4",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#dbd39b",
+              "label": "放上装饰",
+              "garnish": "none"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#dbd39b",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "鸡尾酒杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "摇和后过滤"
+      },
+      {
+        "label": "冰块",
+        "value": "用于摇和后滤出；成品不留冰"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "coupe",
+        "color": "#dbd39b",
+        "layers": [],
+        "garnish": "none",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/daiquiri/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "鸡尾酒杯",
+      "method": "shake",
+      "ice": "过滤后无冰",
+      "baseSpirits": [
+        "rum"
+      ],
+      "dilutionMl": 20,
+      "estimatedAbv": 24.0,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-margarita",
+    "name": "玛格丽特",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "rare",
+    "description": "玛格丽特是一杯以龙舌兰酒、橙味利口酒为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "medium",
+    "flavorTags": [
+      "果香",
+      "酸"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙",
+      "摇酒壶",
+      "滤冰器"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "tequila",
+        "name": "龙舌兰酒",
+        "amount": 50,
+        "unit": "ml",
+        "abv": 40,
+        "note": "100% 龙舌兰原料"
+      },
+      {
+        "ingredientId": "triple-sec",
+        "name": "橙味利口酒",
+        "amount": 20,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "lime-juice",
+        "name": "青柠汁",
+        "amount": 15,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "salt",
+        "name": "盐",
+        "amount": 1,
+        "unit": "g",
+        "abv": 0,
+        "optional": true,
+        "note": "可选半圈盐口；用量为家庭操作参考。"
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-margarita-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。如需盐口，用青柠润湿半圈杯沿，再轻沾盐。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d7c899",
+              "label": "量取原料",
+              "amount": 50,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d8b565",
+              "label": "量取原料",
+              "amount": 20,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#c4d19d",
+              "label": "量取原料",
+              "amount": 15,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-margarita-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d7ce94",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-margarita-step-3",
+        "title": "摇和与过滤",
+        "description": "加入除气泡饮料和装饰外的原料，盖紧摇酒壶，摇约 10–15 秒至壶外变冷；使用滤冰器倒入预冷酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-shake",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d7ce94",
+              "label": "摇和降温"
+            }
+          },
+          {
+            "id": "cocktail-strain",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d7ce94",
+              "label": "过滤倒酒"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-margarita-step-4",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d7ce94",
+              "label": "放上装饰",
+              "garnish": "none"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d7ce94",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "鸡尾酒杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "摇和后过滤"
+      },
+      {
+        "label": "冰块",
+        "value": "用于摇和后滤出；成品不留冰"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "coupe",
+        "color": "#d7ce94",
+        "layers": [],
+        "garnish": "none",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/margarita/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "鸡尾酒杯",
+      "method": "shake",
+      "ice": "过滤后无冰",
+      "baseSpirits": [
+        "tequila"
+      ],
+      "dilutionMl": 20,
+      "estimatedAbv": 26.7,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-mojito",
+    "name": "莫吉托",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "common",
+    "description": "莫吉托是一杯以白朗姆酒为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "清爽",
+      "酸",
+      "草本"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "rum",
+        "name": "白朗姆酒",
+        "amount": 45,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "lime-juice",
+        "name": "青柠汁",
+        "amount": 20,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "mint",
+        "name": "薄荷",
+        "amount": 6,
+        "unit": "枝",
+        "abv": 0,
+        "note": "轻压，不碾碎叶片。"
+      },
+      {
+        "ingredientId": "sugar",
+        "name": "细砂糖",
+        "amount": 2,
+        "unit": "茶匙",
+        "abv": 0
+      },
+      {
+        "ingredientId": "soda",
+        "name": "苏打水",
+        "amount": 60,
+        "unit": "ml",
+        "abv": 0,
+        "note": "IBA 未定量；家庭版先加 60 ml，再按杯量调整。"
+      },
+      {
+        "ingredientId": "lime-slice",
+        "name": "青柠片",
+        "amount": 1,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-mojito-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。在杯中轻压薄荷，加入青柠汁和糖，搅拌帮助溶糖。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e1cf9f",
+              "label": "量取原料",
+              "amount": 45,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#c4d19d",
+              "label": "量取原料",
+              "amount": 20,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-mojito-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#b6c69b",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-mojito-step-3",
+        "title": "轻柔搅拌",
+        "description": "加入非气泡原料，轻柔搅拌至均匀、杯壁变冷。",
+        "scenes": [
+          {
+            "id": "cocktail-stir",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#b6c69b",
+              "label": "轻柔搅拌"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-mojito-step-4",
+        "title": "最后补入气泡饮料",
+        "description": "沿杯壁缓慢加入60 ml 苏打水，轻轻带动混合，避免流失气泡。气泡饮料不可放入密闭摇酒壶摇和。",
+        "scenes": [
+          {
+            "id": "cocktail-top-up",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#b6c69b",
+              "label": "补入饮料",
+              "amount": 60
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-mojito-step-5",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#b6c69b",
+              "label": "放上装饰",
+              "garnish": "lemon"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#b6c69b",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "高球杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "杯中直调"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰降温，按杯量调整"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "highball",
+        "color": "#b6c69b",
+        "layers": [],
+        "garnish": "lemon",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/mojito/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "高球杯",
+      "method": "build",
+      "ice": "冰块",
+      "baseSpirits": [
+        "rum"
+      ],
+      "dilutionMl": 15,
+      "estimatedAbv": 12.9,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-negroni",
+    "name": "尼格罗尼",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "common",
+    "description": "尼格罗尼是一杯以金酒、金巴利苦味酒、甜红味美思为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "苦",
+      "浓郁"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "gin",
+        "name": "金酒",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "campari",
+        "name": "金巴利苦味酒",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 25
+      },
+      {
+        "ingredientId": "sweet-vermouth",
+        "name": "甜红味美思",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 16,
+        "allergens": [
+          "亚硫酸盐"
+        ]
+      },
+      {
+        "ingredientId": "orange-slice",
+        "name": "橙片",
+        "amount": 0.5,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-negroni-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#c4d4c1",
+              "label": "量取原料",
+              "amount": 30,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#b7493a",
+              "label": "量取原料",
+              "amount": 30,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#945341",
+              "label": "量取原料",
+              "amount": 30,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-negroni-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bb6851",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-negroni-step-3",
+        "title": "轻柔搅拌",
+        "description": "加入非气泡原料，轻柔搅拌至均匀、杯壁变冷。",
+        "scenes": [
+          {
+            "id": "cocktail-stir",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bb6851",
+              "label": "轻柔搅拌"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-negroni-step-4",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bb6851",
+              "label": "放上装饰",
+              "garnish": "orange"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bb6851",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "古典杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "搅拌"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰降温，按杯量调整"
+      }
+    ],
+    "allergens": [
+      "亚硫酸盐"
+    ],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "rocks",
+        "color": "#bb6851",
+        "layers": [],
+        "garnish": "orange",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/negroni/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "古典杯",
+      "method": "stir",
+      "ice": "冰块",
+      "baseSpirits": [
+        "gin"
+      ],
+      "dilutionMl": 20,
+      "estimatedAbv": 22.1,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-old-fashioned",
+    "name": "古典鸡尾酒",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "common",
+    "description": "古典鸡尾酒是一杯以波本威士忌、安格式苦精为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "浓郁",
+      "苦"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "bourbon",
+        "name": "波本威士忌",
+        "amount": 45,
+        "unit": "ml",
+        "abv": 40,
+        "note": "此卡使用波本；IBA 也允许黑麦威士忌。"
+      },
+      {
+        "ingredientId": "sugar-cube",
+        "name": "方糖",
+        "amount": 1,
+        "unit": "块",
+        "abv": 0
+      },
+      {
+        "ingredientId": "angostura",
+        "name": "安格式苦精",
+        "amount": 2,
+        "unit": "dash",
+        "abv": 44.7,
+        "note": "IBA 为 few dashes；此卡以 2 dash 起步，不同瓶嘴出量不同。"
+      },
+      {
+        "ingredientId": "water",
+        "name": "饮用水",
+        "amount": 5,
+        "unit": "ml",
+        "abv": 0,
+        "note": "IBA 为少量水；此卡取 5 ml 用于溶糖。"
+      },
+      {
+        "ingredientId": "orange-peel",
+        "name": "橙皮",
+        "amount": 1,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "cherry",
+        "name": "鸡尾酒樱桃",
+        "amount": 1,
+        "unit": "颗",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-old-fashioned-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。用苦精和少量水润湿方糖，压散并溶解，再加入威士忌。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#b87836",
+              "label": "量取原料",
+              "amount": 45,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d3e0dc",
+              "label": "量取原料",
+              "amount": 5,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-old-fashioned-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bd9051",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-old-fashioned-step-3",
+        "title": "轻柔搅拌",
+        "description": "加入非气泡原料，轻柔搅拌至均匀、杯壁变冷。",
+        "scenes": [
+          {
+            "id": "cocktail-stir",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bd9051",
+              "label": "轻柔搅拌"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-old-fashioned-step-4",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bd9051",
+              "label": "放上装饰",
+              "garnish": "orange"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bd9051",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "古典杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "搅拌"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰降温，按杯量调整"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "rocks",
+        "color": "#bd9051",
+        "layers": [],
+        "garnish": "orange",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/old-fashioned/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "古典杯",
+      "method": "stir",
+      "ice": "冰块",
+      "baseSpirits": [
+        "bourbon"
+      ],
+      "dilutionMl": 20,
+      "estimatedAbv": null,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-dry-martini",
+    "name": "干马天尼",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "common",
+    "description": "干马天尼是一杯以金酒、干味美思为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "浓郁",
+      "草本"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙",
+      "调酒杯",
+      "滤冰器"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "gin",
+        "name": "金酒",
+        "amount": 60,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "dry-vermouth",
+        "name": "干味美思",
+        "amount": 10,
+        "unit": "ml",
+        "abv": 18,
+        "allergens": [
+          "亚硫酸盐"
+        ]
+      },
+      {
+        "ingredientId": "lemon-peel",
+        "name": "柠檬皮",
+        "amount": 1,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-dry-martini-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#c4d4c1",
+              "label": "量取原料",
+              "amount": 60,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d8cd97",
+              "label": "量取原料",
+              "amount": 10,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-dry-martini-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d2d5b1",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-dry-martini-step-3",
+        "title": "轻柔搅拌",
+        "description": "在加冰的调酒杯中倒入金酒和干味美思，搅拌约 20 秒；用滤冰器倒入预冷马天尼杯，成品杯不放冰。",
+        "scenes": [
+          {
+            "id": "cocktail-stir",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d2d5b1",
+              "label": "轻柔搅拌"
+            }
+          },
+          {
+            "id": "cocktail-strain",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d2d5b1",
+              "label": "过滤倒酒"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-dry-martini-step-4",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d2d5b1",
+              "label": "放上装饰",
+              "garnish": "lemon"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d2d5b1",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "马天尼杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "搅拌"
+      },
+      {
+        "label": "冰块",
+        "value": "用于摇和后滤出；成品不留冰"
+      }
+    ],
+    "allergens": [
+      "亚硫酸盐"
+    ],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "coupe",
+        "color": "#d2d5b1",
+        "layers": [],
+        "garnish": "lemon",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/dry-martini/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "马天尼杯",
+      "method": "stir",
+      "ice": "过滤后无冰",
+      "baseSpirits": [
+        "gin"
+      ],
+      "dilutionMl": 20,
+      "estimatedAbv": 28.7,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-whiskey-sour",
+    "name": "威士忌酸",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "rare",
+    "description": "威士忌酸是一杯以波本威士忌为风味骨架的经典鸡尾酒。家庭版省略 IBA 可选蛋清，不包含生蛋操作。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "medium",
+    "flavorTags": [
+      "酸",
+      "甜"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙",
+      "摇酒壶",
+      "滤冰器"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "bourbon",
+        "name": "波本威士忌",
+        "amount": 45,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "lemon-juice",
+        "name": "柠檬汁",
+        "amount": 25,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "syrup",
+        "name": "原味糖浆",
+        "amount": 20,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "orange-slice",
+        "name": "橙片",
+        "amount": 0.5,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "cherry",
+        "name": "鸡尾酒樱桃",
+        "amount": 1,
+        "unit": "颗",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-whiskey-sour-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#b87836",
+              "label": "量取原料",
+              "amount": 45,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e2d29a",
+              "label": "量取原料",
+              "amount": 25,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e3d5ae",
+              "label": "量取原料",
+              "amount": 20,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-whiskey-sour-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d9b067",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-whiskey-sour-step-3",
+        "title": "摇和与过滤",
+        "description": "加入除气泡饮料和装饰外的原料，盖紧摇酒壶，摇约 10–15 秒至壶外变冷；使用滤冰器倒入预冷酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-shake",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d9b067",
+              "label": "摇和降温"
+            }
+          },
+          {
+            "id": "cocktail-strain",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d9b067",
+              "label": "过滤倒酒"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-whiskey-sour-step-4",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d9b067",
+              "label": "放上装饰",
+              "garnish": "orange"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d9b067",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "古典杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "摇和后过滤"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰降温，按杯量调整"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "rocks",
+        "color": "#d9b067",
+        "layers": [],
+        "garnish": "orange",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。家庭版省略 IBA 可选蛋清，不包含生蛋操作。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/whiskey-sour/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "古典杯",
+      "method": "shake",
+      "ice": "冰块",
+      "baseSpirits": [
+        "bourbon"
+      ],
+      "dilutionMl": 20,
+      "estimatedAbv": 16.4,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-john-collins",
+    "name": "约翰柯林斯",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "common",
+    "description": "约翰柯林斯是一杯以金酒为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "清爽",
+      "酸"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "gin",
+        "name": "金酒",
+        "amount": 45,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "lemon-juice",
+        "name": "柠檬汁",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "syrup",
+        "name": "原味糖浆",
+        "amount": 15,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "soda",
+        "name": "苏打水",
+        "amount": 60,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "lemon-slice",
+        "name": "柠檬片",
+        "amount": 1,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "cherry",
+        "name": "鸡尾酒樱桃",
+        "amount": 1,
+        "unit": "颗",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-john-collins-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#c4d4c1",
+              "label": "量取原料",
+              "amount": 45,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e2d29a",
+              "label": "量取原料",
+              "amount": 30,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e3d5ae",
+              "label": "量取原料",
+              "amount": 15,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-john-collins-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d4cc97",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-john-collins-step-3",
+        "title": "轻柔搅拌",
+        "description": "加入非气泡原料，轻柔搅拌至均匀、杯壁变冷。",
+        "scenes": [
+          {
+            "id": "cocktail-stir",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d4cc97",
+              "label": "轻柔搅拌"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-john-collins-step-4",
+        "title": "最后补入气泡饮料",
+        "description": "沿杯壁缓慢加入60 ml 苏打水，轻轻带动混合，避免流失气泡。气泡饮料不可放入密闭摇酒壶摇和。",
+        "scenes": [
+          {
+            "id": "cocktail-top-up",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d4cc97",
+              "label": "补入饮料",
+              "amount": 60
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-john-collins-step-5",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d4cc97",
+              "label": "放上装饰",
+              "garnish": "lemon"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d4cc97",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "高球杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "杯中直调"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰降温，按杯量调整"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "highball",
+        "color": "#d4cc97",
+        "layers": [],
+        "garnish": "lemon",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/john-collins/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "高球杯",
+      "method": "build",
+      "ice": "冰块",
+      "baseSpirits": [
+        "gin"
+      ],
+      "dilutionMl": 15,
+      "estimatedAbv": 10.9,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-moscow-mule",
+    "name": "莫斯科骡子",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "common",
+    "description": "莫斯科骡子是一杯以伏特加为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "清爽",
+      "辛香"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "vodka",
+        "name": "伏特加",
+        "amount": 45,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "ginger-beer",
+        "name": "无酒精姜汁汽水",
+        "amount": 120,
+        "unit": "ml",
+        "abv": 0,
+        "note": "选择标示 0% 酒精的姜汁汽水；不同商品不等同。"
+      },
+      {
+        "ingredientId": "lime-juice",
+        "name": "青柠汁",
+        "amount": 10,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "lime-slice",
+        "name": "青柠片",
+        "amount": 1,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-moscow-mule-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#dce1d4",
+              "label": "量取原料",
+              "amount": 45,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#c4d19d",
+              "label": "量取原料",
+              "amount": 10,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-moscow-mule-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#cebe8f",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-moscow-mule-step-3",
+        "title": "轻柔搅拌",
+        "description": "加入非气泡原料，轻柔搅拌至均匀、杯壁变冷。",
+        "scenes": [
+          {
+            "id": "cocktail-stir",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#cebe8f",
+              "label": "轻柔搅拌"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-moscow-mule-step-4",
+        "title": "最后补入气泡饮料",
+        "description": "沿杯壁缓慢加入120 ml 无酒精姜汁汽水，轻轻带动混合，避免流失气泡。气泡饮料不可放入密闭摇酒壶摇和。",
+        "scenes": [
+          {
+            "id": "cocktail-top-up",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#cebe8f",
+              "label": "补入饮料",
+              "amount": 120
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-moscow-mule-step-5",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#cebe8f",
+              "label": "放上装饰",
+              "garnish": "lemon"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#cebe8f",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "骡子杯或古典杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "杯中直调"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰降温，按杯量调整"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "rocks",
+        "color": "#cebe8f",
+        "layers": [],
+        "garnish": "lemon",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/moscow-mule/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "骡子杯或古典杯",
+      "method": "build",
+      "ice": "冰块",
+      "baseSpirits": [
+        "vodka"
+      ],
+      "dilutionMl": 15,
+      "estimatedAbv": 9.5,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-cuba-libre",
+    "name": "自由古巴",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "common",
+    "description": "自由古巴是一杯以白朗姆酒为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "清爽",
+      "甜"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "rum",
+        "name": "白朗姆酒",
+        "amount": 50,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "cola",
+        "name": "可乐",
+        "amount": 120,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "lime-juice",
+        "name": "青柠汁",
+        "amount": 10,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "lime-slice",
+        "name": "青柠片",
+        "amount": 1,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-cuba-libre-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e1cf9f",
+              "label": "量取原料",
+              "amount": 50,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#c4d19d",
+              "label": "量取原料",
+              "amount": 10,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-cuba-libre-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#916847",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-cuba-libre-step-3",
+        "title": "轻柔搅拌",
+        "description": "加入非气泡原料，轻柔搅拌至均匀、杯壁变冷。",
+        "scenes": [
+          {
+            "id": "cocktail-stir",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#916847",
+              "label": "轻柔搅拌"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-cuba-libre-step-4",
+        "title": "最后补入气泡饮料",
+        "description": "沿杯壁缓慢加入120 ml 可乐，轻轻带动混合，避免流失气泡。气泡饮料不可放入密闭摇酒壶摇和。",
+        "scenes": [
+          {
+            "id": "cocktail-top-up",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#916847",
+              "label": "补入饮料",
+              "amount": 120
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-cuba-libre-step-5",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#916847",
+              "label": "放上装饰",
+              "garnish": "lemon"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#916847",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "高球杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "杯中直调"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰降温，按杯量调整"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "highball",
+        "color": "#916847",
+        "layers": [],
+        "garnish": "lemon",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/cuba-libre/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "高球杯",
+      "method": "build",
+      "ice": "冰块",
+      "baseSpirits": [
+        "rum"
+      ],
+      "dilutionMl": 15,
+      "estimatedAbv": 10.3,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-americano",
+    "name": "美式鸡尾酒",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "common",
+    "description": "美式鸡尾酒是一杯以金巴利苦味酒、甜红味美思为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "苦",
+      "清爽"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "campari",
+        "name": "金巴利苦味酒",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 25
+      },
+      {
+        "ingredientId": "sweet-vermouth",
+        "name": "甜红味美思",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 16,
+        "allergens": [
+          "亚硫酸盐"
+        ]
+      },
+      {
+        "ingredientId": "soda",
+        "name": "苏打水",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 0,
+        "note": "IBA 为一小注；此卡以 30 ml 起步。"
+      },
+      {
+        "ingredientId": "orange-slice",
+        "name": "橙片",
+        "amount": 0.5,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "lemon-peel",
+        "name": "柠檬皮",
+        "amount": 1,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-americano-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#b7493a",
+              "label": "量取原料",
+              "amount": 30,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#945341",
+              "label": "量取原料",
+              "amount": 30,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-americano-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bd7d62",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-americano-step-3",
+        "title": "轻柔搅拌",
+        "description": "加入非气泡原料，轻柔搅拌至均匀、杯壁变冷。",
+        "scenes": [
+          {
+            "id": "cocktail-stir",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bd7d62",
+              "label": "轻柔搅拌"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-americano-step-4",
+        "title": "最后补入气泡饮料",
+        "description": "沿杯壁缓慢加入30 ml 苏打水，轻轻带动混合，避免流失气泡。气泡饮料不可放入密闭摇酒壶摇和。",
+        "scenes": [
+          {
+            "id": "cocktail-top-up",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bd7d62",
+              "label": "补入饮料",
+              "amount": 30
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-americano-step-5",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bd7d62",
+              "label": "放上装饰",
+              "garnish": "lemon"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#bd7d62",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "古典杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "杯中直调"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰降温，按杯量调整"
+      }
+    ],
+    "allergens": [
+      "亚硫酸盐"
+    ],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "rocks",
+        "color": "#bd7d62",
+        "layers": [],
+        "garnish": "lemon",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/americano/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "古典杯",
+      "method": "build",
+      "ice": "冰块",
+      "baseSpirits": [],
+      "dilutionMl": 15,
+      "estimatedAbv": 11.7,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-paloma",
+    "name": "帕洛玛",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "common",
+    "description": "帕洛玛是一杯以龙舌兰酒为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "果香",
+      "清爽"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "tequila",
+        "name": "龙舌兰酒",
+        "amount": 50,
+        "unit": "ml",
+        "abv": 40,
+        "note": "100% 龙舌兰原料"
+      },
+      {
+        "ingredientId": "lime-juice",
+        "name": "青柠汁",
+        "amount": 5,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "salt",
+        "name": "盐",
+        "amount": 0.3,
+        "unit": "g",
+        "abv": 0,
+        "note": "IBA 为一撮盐；此卡取约 0.3 g。"
+      },
+      {
+        "ingredientId": "grapefruit-soda",
+        "name": "粉红葡萄柚汽水",
+        "amount": 100,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "lime-slice",
+        "name": "青柠片",
+        "amount": 1,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-paloma-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d7c899",
+              "label": "量取原料",
+              "amount": 50,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#c4d19d",
+              "label": "量取原料",
+              "amount": 5,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-paloma-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d6a18e",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-paloma-step-3",
+        "title": "轻柔搅拌",
+        "description": "加入非气泡原料，轻柔搅拌至均匀、杯壁变冷。",
+        "scenes": [
+          {
+            "id": "cocktail-stir",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d6a18e",
+              "label": "轻柔搅拌"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-paloma-step-4",
+        "title": "最后补入气泡饮料",
+        "description": "沿杯壁缓慢加入100 ml 粉红葡萄柚汽水，轻轻带动混合，避免流失气泡。气泡饮料不可放入密闭摇酒壶摇和。",
+        "scenes": [
+          {
+            "id": "cocktail-top-up",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d6a18e",
+              "label": "补入饮料",
+              "amount": 100
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-paloma-step-5",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d6a18e",
+              "label": "放上装饰",
+              "garnish": "lemon"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d6a18e",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "高球杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "杯中直调"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰降温，按杯量调整"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "highball",
+        "color": "#d6a18e",
+        "layers": [],
+        "garnish": "lemon",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/paloma/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "高球杯",
+      "method": "build",
+      "ice": "冰块",
+      "baseSpirits": [
+        "tequila"
+      ],
+      "dilutionMl": 15,
+      "estimatedAbv": 11.8,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-tequila-sunrise",
+    "name": "龙舌兰日出",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "common",
+    "description": "龙舌兰日出是一杯以龙舌兰酒为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "果香",
+      "甜"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "tequila",
+        "name": "龙舌兰酒",
+        "amount": 45,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "orange-juice",
+        "name": "橙汁",
+        "amount": 90,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "grenadine",
+        "name": "石榴糖浆",
+        "amount": 15,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "orange-slice",
+        "name": "橙片",
+        "amount": 0.5,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-tequila-sunrise-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d7c899",
+              "label": "量取原料",
+              "amount": 45,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e0ac56",
+              "label": "量取原料",
+              "amount": 90,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#b64e4c",
+              "label": "量取原料",
+              "amount": 15,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-tequila-sunrise-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e0a666",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-tequila-sunrise-step-3",
+        "title": "形成日出渐层",
+        "description": "先将龙舌兰酒与橙汁倒入有冰的高球杯。沿杯壁缓慢加入石榴糖浆，让它下沉形成渐层；不要搅拌。",
+        "scenes": [
+          {
+            "id": "cocktail-layer",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e0a666",
+              "label": "缓慢分层",
+              "layers": [
+                "#bd6155",
+                "#e0a666"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-tequila-sunrise-step-4",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e0a666",
+              "label": "放上装饰",
+              "garnish": "orange"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e0a666",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "高球杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "杯中分层"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰降温，按杯量调整"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "highball",
+        "color": "#e0a666",
+        "layers": [
+          "#bd6155",
+          "#e0a666"
+        ],
+        "garnish": "orange",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/tequila-sunrise/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "高球杯",
+      "method": "layer",
+      "ice": "冰块",
+      "baseSpirits": [
+        "tequila"
+      ],
+      "dilutionMl": 15,
+      "estimatedAbv": 10.9,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-espresso-martini",
+    "name": "浓缩咖啡马天尼",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "rare",
+    "description": "浓缩咖啡马天尼是一杯以伏特加、咖啡利口酒为风味骨架的经典鸡尾酒。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "medium",
+    "flavorTags": [
+      "浓郁",
+      "苦",
+      "甜"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙",
+      "摇酒壶",
+      "滤冰器"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "vodka",
+        "name": "伏特加",
+        "amount": 50,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "coffee-liqueur",
+        "name": "咖啡利口酒",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 20,
+        "note": "参考 IBA 的 Kahlúa；品牌酒精度以包装为准。"
+      },
+      {
+        "ingredientId": "syrup",
+        "name": "原味糖浆",
+        "amount": 10,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "espresso",
+        "name": "浓缩咖啡",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 0,
+        "note": "IBA 为 1 份浓缩；此卡取冷却的 30 ml，不使用滚烫液体摇和。"
+      },
+      {
+        "ingredientId": "coffee-beans",
+        "name": "咖啡豆",
+        "amount": 3,
+        "unit": "颗",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-espresso-martini-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#dce1d4",
+              "label": "量取原料",
+              "amount": 50,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#6d4230",
+              "label": "量取原料",
+              "amount": 30,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e3d5ae",
+              "label": "量取原料",
+              "amount": 10,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#714930",
+              "label": "量取原料",
+              "amount": 30,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-espresso-martini-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#9a7658",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-espresso-martini-step-3",
+        "title": "摇和与过滤",
+        "description": "加入除气泡饮料和装饰外的原料，盖紧摇酒壶，摇约 10–15 秒至壶外变冷；使用滤冰器倒入预冷酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-shake",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#9a7658",
+              "label": "摇和降温"
+            }
+          },
+          {
+            "id": "cocktail-strain",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#9a7658",
+              "label": "过滤倒酒"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-espresso-martini-step-4",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。在表面放 3 颗咖啡豆。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#9a7658",
+              "label": "放上装饰",
+              "garnish": "cocoa"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#9a7658",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "鸡尾酒杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "摇和后过滤"
+      },
+      {
+        "label": "冰块",
+        "value": "用于摇和后滤出；成品不留冰"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "coupe",
+        "color": "#9a7658",
+        "layers": [],
+        "garnish": "cocoa",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/espresso-martini/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "鸡尾酒杯",
+      "method": "shake",
+      "ice": "过滤后无冰",
+      "baseSpirits": [
+        "vodka"
+      ],
+      "dilutionMl": 20,
+      "estimatedAbv": 18.6,
+      "tested": false
+    }
+  },
+  {
+    "id": "cocktail-gin-fizz",
+    "name": "金菲士",
+    "category": "cocktail",
+    "group": "cocktail",
+    "rarity": "rare",
+    "description": "金菲士是一杯以金酒为风味骨架的经典鸡尾酒。摇和用冰，滤出后杯内不保留冰块。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 5,
+    "difficulty": "medium",
+    "flavorTags": [
+      "清爽",
+      "酸"
+    ],
+    "equipment": [
+      "量杯",
+      "酒杯",
+      "吧匙",
+      "摇酒壶",
+      "滤冰器"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "gin",
+        "name": "金酒",
+        "amount": 45,
+        "unit": "ml",
+        "abv": 40
+      },
+      {
+        "ingredientId": "lemon-juice",
+        "name": "柠檬汁",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "syrup",
+        "name": "原味糖浆",
+        "amount": 10,
+        "unit": "ml",
+        "abv": 0
+      },
+      {
+        "ingredientId": "soda",
+        "name": "苏打水",
+        "amount": 30,
+        "unit": "ml",
+        "abv": 0,
+        "note": "IBA 为一小注；此卡取 30 ml。"
+      },
+      {
+        "ingredientId": "lemon-slice",
+        "name": "柠檬片",
+        "amount": 1,
+        "unit": "片",
+        "abv": 0,
+        "optional": true
+      },
+      {
+        "ingredientId": "ice",
+        "name": "冰块",
+        "amount": 120,
+        "unit": "g",
+        "abv": 0,
+        "note": "用于降温；融冰量不等于准备冰量。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "cocktail-gin-fizz-step-1",
+        "title": "量取与准备",
+        "description": "量取材料，预冷酒杯；使用量杯核对各项用量。",
+        "scenes": [
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#c4d4c1",
+              "label": "量取原料",
+              "amount": 45,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e2d29a",
+              "label": "量取原料",
+              "amount": 30,
+              "unit": "ml"
+            }
+          },
+          {
+            "id": "measure-pour",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#e3d5ae",
+              "label": "量取原料",
+              "amount": 10,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-gin-fizz-step-2",
+        "title": "加冰降温",
+        "description": "取约 120 g 冰块用于降温。摇和酒款把冰放入摇酒壶；杯中直调酒款把冰放入酒杯。",
+        "scenes": [
+          {
+            "id": "cocktail-add-ice",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d3d6ab",
+              "label": "加入冰块",
+              "iceCount": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-gin-fizz-step-3",
+        "title": "摇和与过滤",
+        "description": "加入除气泡饮料和装饰外的原料，盖紧摇酒壶，摇约 10–15 秒至壶外变冷；使用滤冰器倒入预冷酒杯。此卡滤出后杯内不放冰。",
+        "scenes": [
+          {
+            "id": "cocktail-shake",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d3d6ab",
+              "label": "摇和降温"
+            }
+          },
+          {
+            "id": "cocktail-strain",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d3d6ab",
+              "label": "过滤倒酒"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-gin-fizz-step-4",
+        "title": "最后补入气泡饮料",
+        "description": "沿杯壁缓慢加入30 ml 苏打水，轻轻带动混合，避免流失气泡。气泡饮料不可放入密闭摇酒壶摇和。",
+        "scenes": [
+          {
+            "id": "cocktail-top-up",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d3d6ab",
+              "label": "补入饮料",
+              "amount": 30
+            }
+          }
+        ]
+      },
+      {
+        "id": "cocktail-gin-fizz-step-5",
+        "title": "装饰与品尝",
+        "description": "可选装饰见材料表，缺少装饰可省略。成品及时饮用；此配方尚未实测。",
+        "scenes": [
+          {
+            "id": "cocktail-garnish",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d3d6ab",
+              "label": "放上装饰",
+              "garnish": "lemon"
+            }
+          },
+          {
+            "id": "cocktail-reveal",
+            "durationMs": 2400,
+            "params": {
+              "vessel": "glass",
+              "color": "#d3d6ab",
+              "label": "成品揭晓"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "label": "杯型",
+        "value": "细高杯"
+      },
+      {
+        "label": "调制方法",
+        "value": "摇和后过滤"
+      },
+      {
+        "label": "冰块",
+        "value": "用于摇和后滤出；成品不留冰"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/cocktail.svg",
+      "lineArt": "assets/line-art/cocktail-outline.svg",
+      "animationTemplate": "cocktail-outline",
+      "finish": {
+        "shape": "highball",
+        "color": "#d3d6ab",
+        "layers": [],
+        "garnish": "lemon",
+        "accent": "#8e9b72",
+        "pattern": "plain"
+      }
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑 · IBA 配方参考",
+      "sourceUrl": "docs/cocktail-sources.md",
+      "license": "步骤与插画为项目独立编写；使用权限以仓库许可证为准。未转载 IBA 正文和图片。",
+      "attribution": "参考：International Bartenders Association（IBA）",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已查阅 IBA 对应原页，核对主要配比和方法；非定量用法的家庭操作值在原料备注中单独声明。酒精度采用典型原料和预估融冰量，不是实测。摇和用冰，滤出后杯内不保留冰块。尚未进行实际调酒测试。",
+      "referenceUrl": "https://iba-world.com/iba-cocktail/gin-fizz/",
+      "referenceLicenseStatus": "review_required",
+      "imageLicenseStatus": "original"
+    },
+    "cocktail": {
+      "kind": "classic",
+      "glassware": "细高杯",
+      "method": "shake",
+      "ice": "过滤后无冰",
+      "baseSpirits": [
+        "gin"
+      ],
+      "dilutionMl": 20,
+      "estimatedAbv": 13.3,
+      "tested": false
+    }
   }
 ]

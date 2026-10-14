@@ -23,7 +23,7 @@ const isImage = path => path.startsWith('assets/cards/');
 
 self.addEventListener('install', event => {
   // No skipWaiting: an old page keeps its matching worker until all old tabs close.
-  // Four tiny original SVG illustrations are core offline content, not remote photos.
+  // Original SVG illustrations and the ingredient dictionary are core offline content.
   event.waitUntil(caches.open(CORE).then(cache => cache.addAll(ASSETS.map(path => BASE + path))));
 });
 self.addEventListener('activate', event => {

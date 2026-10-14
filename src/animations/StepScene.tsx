@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Container, Decoration, Ingredient, Steam } from './parts';
 import { FinishArtwork } from './FinishArtwork';
+import { CocktailScene } from './CocktailScene';
 import type { AnimationScene, FinishConfig } from './types';
 
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
@@ -20,6 +21,9 @@ export function StepScene({ scene, progress, finish }: { scene: AnimationScene; 
   const spoon = (kind: 'spoon' | 'whisk' | 'spatula' | 'blender') => <g transform={`translate(${145 + Math.sin(p * Math.PI * 8) * 28} ${137 + Math.cos(p * Math.PI * 8) * 5}) rotate(${Math.sin(p * Math.PI * 8) * 18})`}><path d="M0-92v67" strokeWidth="5" />{kind === 'whisk' ? <><ellipse cy="-4" rx="16" ry="25" /><ellipse cy="-4" rx="7" ry="25" /></> : kind === 'spatula' ? <rect x="-13" y="-24" width="26" height="41" rx="5" fill="#dbc6a1" /> : kind === 'blender' ? <><rect x="-15" y="-90" width="30" height="41" rx="7" fill="#e3d8c6" /><path d="m-19 7h38m-15-7 5 14" /></> : <ellipse cy="-4" rx="9" ry="17" fill="#dcc9ab" />}</g>;
   let content: ReactNode;
   switch (scene.id) {
+    case 'cocktail-shake': case 'cocktail-stir': case 'cocktail-strain': case 'cocktail-layer':
+    case 'cocktail-add-ice': case 'cocktail-top-up': case 'cocktail-garnish': case 'cocktail-reveal':
+      content = <CocktailScene scene={scene} progress={p} finish={finish} />; break;
     case 'ingredient-drop': content = bowl(particles(scene.params.ingredient)); break;
     case 'measure-pour': content = <>{bowl(<>{liquid()}{pour()}</>)}<g transform={`translate(78 45) rotate(${q * 65})`}><path d="M-25-22h48v48h-48Z" fill="#eee3cd" /><path d="M23-13h12v26H23m-37-27h13m-13 12h9m-9 12h13" /></g><text x="231" y="61" textAnchor="middle">{Math.round(scene.params.amount * q)} {scene.params.unit}</text></>; break;
     case 'mix-stir': content = bowl(<>{liquid(1)}<g opacity={Math.sin(p * Math.PI)}><ellipse cx="150" cy="168" rx="43" ry="7" /><path d="M120 165q32-12 60 0" /></g>{spoon(scene.params.tool)}</>); break;

@@ -1,0 +1,21 @@
+import { useEffect, useState } from 'react';
+import type { FinishConfig } from './types';
+import { FinishArtwork } from './FinishArtwork';
+
+/** Card revelation reuses the finished geometry; its brief clock runs only during drawing. */
+export function AnimatedFinish({ config, drawing, staticMode }: { config: FinishConfig; drawing: boolean; staticMode: boolean }) {
+  const [progress, setProgress] = useState(1);
+  useEffect(() => {
+    if (!drawing || staticMode) { setProgress(1); return; }
+    let frame = 0;
+    const start = performance.now();
+    const tick = (now: number) => {
+      const p = Math.min(1, (now - start) / 1200);
+      setProgress(p);
+      if (p < 1) frame = requestAnimationFrame(tick);
+    };
+    setProgress(0); frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [drawing, staticMode]);
+  return <FinishArtwork config={config} progress={progress} />;
+}

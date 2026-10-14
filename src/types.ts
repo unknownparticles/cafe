@@ -1,3 +1,5 @@
+import type { FinishConfig, RecipeStep } from './animations/types';
+
 /** Cards use a fixed animation vocabulary so saved recipes remain portable. */
 export type AnimationTemplate = 'coffee-cup' | 'coffee-pour' | 'dessert-outline';
 
@@ -37,9 +39,9 @@ export interface Recipe {
   flavorTags: string[];
   equipment: string[];
   ingredients: Ingredient[];
-  steps: string[];
+  steps: RecipeStep[];
   parameters: { label: string; value: string }[];
   allergens: string[];
-  artwork: { image: string; lineArt: string; animationTemplate: AnimationTemplate };
+  artwork: { image: string; lineArt: string; animationTemplate: AnimationTemplate; finish: FinishConfig };
   source: RecipeSource;
 }

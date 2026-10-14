@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, realpathSync } from 'node:fs';
 import { dirname, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { validateFinish, validateStep } from './validate-animations.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const publicRoot = resolve(root, 'public');
@@ -19,6 +20,8 @@ export function validateRecipes(recipes, { checkAssets = true } = {}) {
   if (!Array.isArray(recipes)) return ['配方库必须是数组'];
   if (recipes.length !== 60) errors.push(`配方应有 60 条，实际 ${recipes.length} 条`);
   const ids = new Set();
+  const stepIds = new Set();
+  const dessertFinishes = new Set();
   const counts = Object.fromEntries(groups.map(group => [group, 0]));
   recipes.forEach((recipe, index) => {
     const label = `配方 ${index + 1}`;
@@ -37,7 +40,15 @@ export function validateRecipes(recipes, { checkAssets = true } = {}) {
     require(Number.isInteger(recipe.servings) && recipe.servings > 0, 'servings 必须是正整数');
     require(positive(recipe.prepTimeMinutes), 'prepTimeMinutes 必须大于零');
     require(positive(recipe.totalTimeMinutes) && recipe.totalTimeMinutes >= recipe.prepTimeMinutes, '总时间必须包含准备时间');
-    for (const key of ['flavorTags', 'equipment', 'steps']) require(strings(recipe[key]), `${key} 必须包含非空文本`);
+    for (const key of ['flavorTags', 'equipment']) require(strings(recipe[key]), `${key} 必须包含非空文本`);
+    require(Array.isArray(recipe.steps) && recipe.steps.length > 0, 'steps 必须包含步骤对象');
+    if (Array.isArray(recipe.steps)) recipe.steps.forEach((step, i) => {
+      for (const error of validateStep(step)) require(false, `步骤 ${i + 1}: ${error}`);
+      if (object(step) && nonempty(step.id)) {
+        require(!stepIds.has(step.id), `步骤 id 重复: ${step.id}`);
+        stepIds.add(step.id);
+      }
+    });
     require(strings(recipe.allergens, true), 'allergens 必须是文本数组，可为空');
     const ingredientAllergens = new Set();
     require(Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0, 'ingredients 不能为空');
@@ -56,6 +67,15 @@ export function validateRecipes(recipes, { checkAssets = true } = {}) {
     const artwork = recipe.artwork;
     require(object(artwork), 'artwork 必填');
     if (object(artwork)) {
+      const finishErrors = validateFinish(artwork.finish);
+      for (const error of finishErrors) require(false, error);
+      if (recipe.category === 'dessert' && finishErrors.length === 0) {
+        // Canonical field order makes uniqueness independent of JSON key ordering.
+        const finish = artwork.finish;
+        const signature = JSON.stringify([finish.shape, finish.color, finish.layers, finish.garnish, finish.accent, finish.pattern]);
+        require(!dessertFinishes.has(signature), '甜点成品图配置重复');
+        dessertFinishes.add(signature);
+      }
       require(templates.includes(artwork.animationTemplate), 'animationTemplate 无效');
       require(artwork.animationTemplate === (recipe.category === 'dessert' ? 'dessert-outline' : artwork.animationTemplate) && (recipe.category !== 'coffee' || ['coffee-cup', 'coffee-pour'].includes(artwork.animationTemplate)), '动画模板与分类不一致');
       for (const key of ['image', 'lineArt']) {
@@ -84,6 +104,7 @@ export function validateRecipes(recipes, { checkAssets = true } = {}) {
     }
   });
   for (const group of groups) if (counts[group] !== 15) errors.push(`${group} 应有 15 条，实际 ${counts[group]} 条`);
+  if (dessertFinishes.size !== 30) errors.push(`甜点应有 30 套不同成品图配置，实际 ${dessertFinishes.size} 套`);
   return errors;
 }
 

@@ -50,6 +50,16 @@ npm run validate
 
 ## 添加动画模板
 
+制作步骤现在使用 `RecipeStep` 对象：`id`、`title`、`description`、`scenes`。每个场景声明 `id`、`durationMs` 和对应模板参数，类型见 `src/animations/types.ts`。所有207条步骤说明保留，700个场景按实际制作顺序演示；不要在运行时猜测文字对应动作。
+
+统一 `StepAnimationPlayer` 支持播放、暂停、重播、跳过及场景选择；切换步骤会停止旧时钟，隐藏标签页会暂停。动画关闭或系统减少动态时，每个动作仍可选看静态完成帧。数值是制作参数，不是动画倒计时；未注明的温度使用 `null`，避免动画额外编造工艺。
+
+24个动作在 `StepScene.tsx` 中复用 `parts.tsx` 的器具、原料与装饰。新增动作时同步扩充类型、渲染分支和 `scripts/validate-animations.mjs` 的参数门禁。`plate-present` 的 `action` 明确区分擦拭、静置、冷却、铺纸、脱模等阶段。
+
+成品 `artwork.finish` 由形状、颜色、层次、装饰与纹理组合；`FinishArtwork.tsx` 在首页、图鉴、详情和步骤结尾共享。30款甜品各有不同配置，不增加逐配方图片文件。
+
+手机首页采用卡片优先的布局，按小视口高度和安全区域适配；更新状态通过设置入口提示，避免挤压卡片。大字体时仍允许滚动，保障文字可读。
+
 1. 在 `public/assets/line-art/` 创建原创、安全 SVG，使用 `path` 等几何图形，不嵌入脚本或外部资源。
 2. 扩充 `src/types.ts` 的 `AnimationTemplate` 和校验器模板枚举。
 3. 用配方的 `artwork.animationTemplate` 与 `lineArt` 引用同名文件；`artwork.image` 引用成品 SVG。

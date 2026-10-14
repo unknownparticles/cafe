@@ -1,0 +1,5187 @@
+[
+  {
+    "id": "espresso",
+    "name": "双份浓缩",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "rare",
+    "description": "浓郁短饮，观察流速与风味建立每天的萃取基准。",
+    "servings": 1,
+    "prepTimeMinutes": 3,
+    "totalTimeMinutes": 5,
+    "difficulty": "medium",
+    "flavorTags": [
+      "浓郁",
+      "坚果"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      }
+    ],
+    "steps": [
+      "预热机器、粉碗和小杯，擦干粉碗。",
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "轻晃杯子混合油脂与咖啡液，趁热品尝。"
+    ],
+    "parameters": [
+      {
+        "label": "粉液比",
+        "value": "18 g : 36 g"
+      },
+      {
+        "label": "水温",
+        "value": "92–94°C"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "ristretto",
+    "name": "短萃浓缩",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "rare",
+    "description": "减少出液量，保留稠厚口感。",
+    "servings": 1,
+    "prepTimeMinutes": 3,
+    "totalTimeMinutes": 5,
+    "difficulty": "medium",
+    "flavorTags": [
+      "稠厚",
+      "浓郁"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 24 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      }
+    ],
+    "steps": [
+      "预热机器和杯子，将 18 克豆磨得比常规浓缩略细并压平。",
+      "以 92°C 水萃取，20–25 秒接取 24 克咖啡液即停止。",
+      "轻晃混匀，若过酸下次略磨细，勿靠无限延长时间补救。"
+    ],
+    "parameters": [
+      {
+        "label": "粉液比",
+        "value": "18 g : 24 g"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "lungo",
+    "name": "长萃浓缩",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "rare",
+    "description": "延长萃取带出更多烘烤气息。",
+    "servings": 1,
+    "prepTimeMinutes": 3,
+    "totalTimeMinutes": 5,
+    "difficulty": "medium",
+    "flavorTags": [
+      "烘烤",
+      "醇厚"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 100,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 60 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      }
+    ],
+    "steps": [
+      "预热器具，18 克咖啡豆研磨至比常规浓缩略粗。",
+      "以 92°C 萃取 35–45 秒，接取 60 克咖啡液后停止。",
+      "搅匀饮用；若木质涩感明显，下次缩短至 50 克。"
+    ],
+    "parameters": [
+      {
+        "label": "目标出液",
+        "value": "60 g"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "americano",
+    "name": "热美式",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "common",
+    "description": "浓缩与热水组成清晰轻盈的日常一杯。",
+    "servings": 1,
+    "prepTimeMinutes": 3,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "清爽",
+      "烘烤"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "热水壶"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "饮用水",
+        "amount": 140,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "将额外 140 毫升水加热到约 80°C，倒入 250 毫升杯。",
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "把 36 克浓缩倒入热水，轻搅两次。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "iced-americano",
+    "name": "冰美式",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "common",
+    "description": "降温后的浓缩保留清爽烘烤香。",
+    "servings": 1,
+    "prepTimeMinutes": 3,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "清爽",
+      "冰凉"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "饮用水",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "食用冰块",
+        "amount": 120,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "在 350 毫升杯中放入 120 克冰块与额外 100 毫升冷饮用水。",
+      "沿冰块倒入 36 克浓缩，搅拌均匀后立即饮用。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "latte",
+    "name": "热拿铁",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "rare",
+    "description": "细奶泡和浓缩融合，适合慢慢享用。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 7,
+    "difficulty": "medium",
+    "flavorTags": [
+      "奶香",
+      "顺滑"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "奶缸",
+      "温度计"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 180,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      }
+    ],
+    "steps": [
+      "预热 300 毫升杯，准备冷牛奶。",
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "用蒸汽棒给 180 毫升牛奶少量进气后旋转加热到 55–60°C，避免超过 65°C。",
+      "轻敲奶缸、旋转消除大泡，将奶缓慢注入浓缩。"
+    ],
+    "parameters": [
+      {
+        "label": "奶温",
+        "value": "55–60°C"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "iced-latte",
+    "name": "冰拿铁",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "common",
+    "description": "无需打泡的清凉奶咖。",
+    "servings": 1,
+    "prepTimeMinutes": 3,
+    "totalTimeMinutes": 5,
+    "difficulty": "easy",
+    "flavorTags": [
+      "奶香",
+      "冰凉"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 160,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "食用冰块",
+        "amount": 100,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "350 毫升杯放入冰块，再倒入冷牛奶。",
+      "缓缓倒入浓缩，饮用前搅匀。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "cappuccino",
+    "name": "卡布奇诺",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "rare",
+    "description": "较厚奶泡让小杯奶咖有蓬松口感。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 7,
+    "difficulty": "medium",
+    "flavorTags": [
+      "奶泡",
+      "浓郁"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "奶缸",
+      "温度计"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 110,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "蒸汽棒先为 110 毫升冷牛奶进气约 4 秒，再保持漩涡加热至 60°C。",
+      "旋转奶缸让泡沫均匀，倒入浓缩，使成品表面留约 1 厘米奶泡。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "flat-white",
+    "name": "馥芮白",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "rare",
+    "description": "浓缩比例更高的薄奶泡咖啡。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 7,
+    "difficulty": "medium",
+    "flavorTags": [
+      "浓郁",
+      "奶香"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "奶缸",
+      "温度计"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 120,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "将冷牛奶仅短暂进气 1–2 秒，继续旋转加热至 55–60°C，形成薄细泡。",
+      "将牛奶连续注入浓缩，保持表面奶泡约 3 毫米。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "macchiato",
+    "name": "浓缩玛奇朵",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "rare",
+    "description": "用一小匙奶泡柔化浓缩。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 7,
+    "difficulty": "medium",
+    "flavorTags": [
+      "奶泡",
+      "浓郁"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "奶缸",
+      "小匙"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 60,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "将 60 毫升牛奶打发至 60°C，静置 15 秒让泡沫集中。",
+      "取约 15 毫升奶泡覆盖浓缩；剩余温牛奶另饮，不必全加。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "mocha",
+    "name": "摩卡",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "common",
+    "description": "可可的苦香和牛奶包裹浓缩。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 8,
+    "difficulty": "easy",
+    "flavorTags": [
+      "可可",
+      "奶香"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "奶缸",
+      "小匙"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 150,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "无糖可可粉",
+        "amount": 6,
+        "unit": "g"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 12,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "将可可粉和糖放进杯中，加入热浓缩搅拌至无干粉。",
+      "把牛奶加热到 60°C 并打出薄泡，分两次倒入巧克力咖啡并搅匀。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "v60-pourover",
+    "name": "锥杯手冲",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "rare",
+    "description": "用分段注水获得清晰层次。",
+    "servings": 1,
+    "prepTimeMinutes": 4,
+    "totalTimeMinutes": 7,
+    "difficulty": "medium",
+    "flavorTags": [
+      "清亮",
+      "花果"
+    ],
+    "equipment": [
+      "锥形滤杯",
+      "滤纸",
+      "手冲壶",
+      "电子秤",
+      "磨豆机"
+    ],
+    "ingredients": [
+      {
+        "name": "中浅烘咖啡豆",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 300,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "用 60 毫升热水润湿滤纸并预热分享壶，倒掉润纸水。",
+      "将咖啡豆中细研磨，滤杯中铺平；用 93°C 水注入 30 毫升，闷蒸 30 秒。",
+      "绕圈注水至累计 120 毫升，约 1 分钟时继续至 240 毫升；2 分 30 秒至 3 分钟滴滤结束移走滤杯。"
+    ],
+    "parameters": [
+      {
+        "label": "冲煮粉水比",
+        "value": "15 g : 240 ml"
+      },
+      {
+        "label": "润纸水",
+        "value": "60 ml"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/pour.svg",
+      "lineArt": "assets/line-art/coffee-pour.svg",
+      "animationTemplate": "coffee-pour"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "french-press",
+    "name": "法压咖啡",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "common",
+    "description": "浸泡式冲煮带来圆润厚实的口感。",
+    "servings": 1,
+    "prepTimeMinutes": 3,
+    "totalTimeMinutes": 8,
+    "difficulty": "easy",
+    "flavorTags": [
+      "醇厚",
+      "坚果"
+    ],
+    "equipment": [
+      "法压壶",
+      "热水壶",
+      "电子秤",
+      "磨豆机"
+    ],
+    "ingredients": [
+      {
+        "name": "中烘咖啡豆",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 300,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "咖啡豆磨粗，放进预热的法压壶。",
+      "注入 94°C 水 300 毫升，轻搅使咖啡粉全部浸湿，盖上盖但不下压。",
+      "浸泡 4 分钟后缓慢下压，将全部咖啡倒入杯中，避免继续浸泡变苦。"
+    ],
+    "parameters": [
+      {
+        "label": "浸泡",
+        "value": "4 分钟"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/pour.svg",
+      "lineArt": "assets/line-art/coffee-pour.svg",
+      "animationTemplate": "coffee-pour"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "cold-brew",
+    "name": "冷萃黑咖啡",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "epic",
+    "description": "用时间换取温和的冷咖啡。",
+    "servings": 3,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 730,
+    "difficulty": "easy",
+    "flavorTags": [
+      "低苦感",
+      "清爽"
+    ],
+    "equipment": [
+      "带盖壶",
+      "滤纸",
+      "滤杯",
+      "冰箱",
+      "磨豆机"
+    ],
+    "ingredients": [
+      {
+        "name": "中烘咖啡豆",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 600,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "咖啡豆粗磨，放入干净的带盖壶，加入 600 毫升冷饮用水并搅匀。",
+      "盖好放入 4°C 冰箱浸泡 12 小时。",
+      "用滤纸或细密滤布过滤，不挤压粉渣；分成 3 杯，未喝的密封冷藏并在 48 小时内饮用。"
+    ],
+    "parameters": [
+      {
+        "label": "浸泡温度",
+        "value": "4°C"
+      },
+      {
+        "label": "浸泡时间",
+        "value": "12 小时"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/pour.svg",
+      "lineArt": "assets/line-art/coffee-pour.svg",
+      "animationTemplate": "coffee-pour"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "moka-pot",
+    "name": "摩卡壶咖啡",
+    "category": "coffee",
+    "group": "classic",
+    "rarity": "rare",
+    "description": "炉火煮出的浓醇小杯，注意火候。",
+    "servings": 2,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 10,
+    "difficulty": "medium",
+    "flavorTags": [
+      "烘烤",
+      "浓醇"
+    ],
+    "equipment": [
+      "3 杯摩卡壶",
+      "炉具",
+      "隔热手套",
+      "磨豆机"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 150,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "选用标称 3 杯、下壶容量约 150 毫升的摩卡壶；加入热水至安全阀下方，切勿盖住阀门。",
+      "咖啡豆中细研磨，平铺粉槽、不压粉；戴隔热手套拧紧上下壶。",
+      "小火加热并开盖观察，咖啡流出后转最小火；流色转浅或开始噗声时立刻离火，用湿布冷却下壶。",
+      "倒入两只小杯，等稍降温后饮用。"
+    ],
+    "parameters": [
+      {
+        "label": "炉火",
+        "value": "小火"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "orange-tonic",
+    "name": "香橙汤力咖啡",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "橙汁果香与汤力的微苦气泡相遇。",
+    "servings": 1,
+    "prepTimeMinutes": 4,
+    "totalTimeMinutes": 6,
+    "difficulty": "easy",
+    "flavorTags": [
+      "柑橘",
+      "气泡"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "长柄匙"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "橙汁",
+        "amount": 60,
+        "unit": "ml"
+      },
+      {
+        "name": "汤力水",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "食用冰块",
+        "amount": 100,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "在 400 毫升杯里放冰块、橙汁和冰镇汤力水，沿杯壁轻倒避免消泡。",
+      "沿小匙背倒入浓缩形成色层，饮用前轻搅一次。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "coconut-latte",
+    "name": "椰香冰咖啡",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "椰乳的油润口感搭配烘烤香。",
+    "servings": 1,
+    "prepTimeMinutes": 4,
+    "totalTimeMinutes": 6,
+    "difficulty": "easy",
+    "flavorTags": [
+      "椰香",
+      "冰凉"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "小匙"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "无糖椰乳饮料",
+        "amount": 160,
+        "unit": "ml"
+      },
+      {
+        "name": "椰糖",
+        "amount": 8,
+        "unit": "g"
+      },
+      {
+        "name": "食用冰块",
+        "amount": 100,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "将椰糖加入热浓缩搅拌溶解。",
+      "摇匀椰乳饮料，倒入装冰的杯中，再加入咖啡搅匀。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "honey-cinnamon",
+    "name": "蜂蜜肉桂拿铁",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "温暖香料和蜂蜜让奶咖适合慢饮。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 7,
+    "difficulty": "easy",
+    "flavorTags": [
+      "蜂蜜",
+      "香料"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "奶缸"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 160,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "蜂蜜",
+        "amount": 12,
+        "unit": "g"
+      },
+      {
+        "name": "肉桂粉",
+        "amount": 0.3,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "将蜂蜜和 0.2 克肉桂粉加入浓缩搅匀。",
+      "牛奶加热到 60°C 并打薄泡，倒入咖啡；表面撒剩余 0.1 克肉桂粉。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "sesame-latte",
+    "name": "黑芝麻拿铁",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "黑芝麻酱带来坚果般的香浓。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 8,
+    "difficulty": "easy",
+    "flavorTags": [
+      "芝麻",
+      "坚果"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "小打蛋器",
+      "小锅"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 160,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "无糖黑芝麻酱",
+        "amount": 12,
+        "unit": "g",
+        "allergens": [
+          "芝麻"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 8,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "将芝麻酱、糖与热浓缩反复搅匀至顺滑。",
+      "牛奶加热至 60°C，先加三分之一拌开芝麻酱，再加余奶；饮用中可轻搅防沉淀。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "芝麻"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "osmanthus-oat",
+    "name": "桂花燕麦咖啡",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "桂花清香融入顺滑燕麦饮。",
+    "servings": 1,
+    "prepTimeMinutes": 4,
+    "totalTimeMinutes": 6,
+    "difficulty": "easy",
+    "flavorTags": [
+      "桂花",
+      "谷物"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "小匙"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "燕麦饮",
+        "amount": 160,
+        "unit": "ml",
+        "allergens": [
+          "麸质"
+        ],
+        "note": "选择含麸质燕麦产品；无麸质需求需核对包装"
+      },
+      {
+        "name": "糖桂花",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "食用冰块",
+        "amount": 80,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "将糖桂花拌入热浓缩，静置 1 分钟。",
+      "杯里放冰与燕麦饮，倒入桂花咖啡搅匀。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "sea-salt-cream",
+    "name": "海盐奶盖冷咖啡",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "轻咸奶盖与清爽冰美式形成两层。",
+    "servings": 1,
+    "prepTimeMinutes": 7,
+    "totalTimeMinutes": 9,
+    "difficulty": "easy",
+    "flavorTags": [
+      "咸甜",
+      "奶香"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "手持打蛋器",
+      "小碗"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "饮用水",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "食用冰块",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "淡奶油",
+        "amount": 35,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 10,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "盐",
+        "amount": 0.3,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "把冷淡奶油、牛奶、糖和盐打到浓稠但仍可流动，避免打成硬挺奶油。",
+      "杯里放冰、额外 100 毫升冷水和浓缩，顶部缓慢倒入奶盖。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "lemon-sparkling",
+    "name": "柠檬气泡咖啡",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "柠檬汁提亮气泡黑咖啡。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 7,
+    "difficulty": "easy",
+    "flavorTags": [
+      "柠檬",
+      "气泡"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "小匙"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": 12,
+        "unit": "ml"
+      },
+      {
+        "name": "无味气泡水",
+        "amount": 140,
+        "unit": "ml"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 10,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "食用冰块",
+        "amount": 100,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "用额外 10 毫升热水将糖溶解，加入柠檬汁。",
+      "大杯放冰、柠檬糖液和冰镇气泡水，最后缓缓倒入浓缩，轻搅饮用。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "brown-sugar-spice",
+    "name": "红糖姜香咖啡",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "姜的微辣和红糖适合热饮。",
+    "servings": 1,
+    "prepTimeMinutes": 6,
+    "totalTimeMinutes": 10,
+    "difficulty": "easy",
+    "flavorTags": [
+      "姜香",
+      "暖甜"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "小锅",
+      "滤网"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "红糖",
+        "amount": 14,
+        "unit": "g"
+      },
+      {
+        "name": "鲜姜片",
+        "amount": 8,
+        "unit": "g"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 150,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "饮用水",
+        "amount": 30,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "小锅放姜片、红糖和额外 30 毫升水，小火煮 3 分钟后捞出姜片。",
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "糖液锅里加入牛奶，加热到 60°C 后倒进浓缩，搅拌均匀。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "peanut-mocha",
+    "name": "花生可可咖啡",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "花生酱与可可形成饱满甜香。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 8,
+    "difficulty": "easy",
+    "flavorTags": [
+      "花生",
+      "可可"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "小打蛋器",
+      "小锅"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 160,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "顺滑无糖花生酱",
+        "amount": 12,
+        "unit": "g",
+        "allergens": [
+          "花生"
+        ]
+      },
+      {
+        "name": "无糖可可粉",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 10,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "花生酱、可可和糖放杯中，加热浓缩用小打蛋器搅匀。",
+      "牛奶加热到 60°C，分次拌入咖啡，防止花生酱成团。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "花生"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "vanilla-affogato",
+    "name": "香草阿芙佳朵",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "热浓缩淋过香草冰淇淋，马上享用温差。",
+    "servings": 1,
+    "prepTimeMinutes": 4,
+    "totalTimeMinutes": 15,
+    "difficulty": "easy",
+    "flavorTags": [
+      "香草",
+      "冷热"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "冰淇淋勺",
+      "冰箱"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "香草冰淇淋",
+        "amount": 80,
+        "unit": "g",
+        "allergens": [
+          "乳",
+          "蛋"
+        ],
+        "note": "按含乳蛋产品标注；购买时核对标签"
+      }
+    ],
+    "steps": [
+      "将 150 毫升甜品杯冷冻 10 分钟，挖入冰淇淋。",
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "将热浓缩直接淋在冰淇淋上，立即用匙享用。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "strawberry-latte",
+    "name": "草莓果酱拿铁",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "果酱在底部形成清甜果香层。",
+    "servings": 1,
+    "prepTimeMinutes": 4,
+    "totalTimeMinutes": 6,
+    "difficulty": "easy",
+    "flavorTags": [
+      "草莓",
+      "奶香"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "长柄匙"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 150,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "草莓果酱",
+        "amount": 25,
+        "unit": "g"
+      },
+      {
+        "name": "食用冰块",
+        "amount": 80,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "将草莓果酱放入杯底，沿杯壁加入冰块与冷牛奶。",
+      "缓缓倒入浓缩，喝前充分搅匀果酱；果酱已含糖无需再加糖。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "matcha-coffee",
+    "name": "抹茶双层咖啡",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "抹茶的青香与咖啡烘烤香分层组合。",
+    "servings": 1,
+    "prepTimeMinutes": 6,
+    "totalTimeMinutes": 8,
+    "difficulty": "easy",
+    "flavorTags": [
+      "抹茶",
+      "微苦"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "茶筅",
+      "细筛"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "抹茶粉",
+        "amount": 2,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 25,
+        "unit": "ml"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 140,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 10,
+        "unit": "g"
+      },
+      {
+        "name": "食用冰块",
+        "amount": 100,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "抹茶过筛，与额外 25 毫升 75°C 水和糖搅到无颗粒。",
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "杯底倒抹茶液，加冰和冷牛奶；沿匙背倒入浓缩，饮前搅匀。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "cardamom-coffee",
+    "name": "豆蔻香料咖啡",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "用滤泡方式释放小豆蔻的清凉香。",
+    "servings": 1,
+    "prepTimeMinutes": 4,
+    "totalTimeMinutes": 9,
+    "difficulty": "easy",
+    "flavorTags": [
+      "豆蔻",
+      "香料"
+    ],
+    "equipment": [
+      "法压壶",
+      "磨豆机",
+      "热水壶",
+      "小臼"
+    ],
+    "ingredients": [
+      {
+        "name": "中烘咖啡豆",
+        "amount": 16,
+        "unit": "g"
+      },
+      {
+        "name": "绿豆蔻籽",
+        "amount": 0.4,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 260,
+        "unit": "ml"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 6,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "将豆蔻籽轻压碎，与中粗研磨的咖啡粉一起放进法压壶。",
+      "注入 93°C 水，搅匀，盖上浸泡 4 分钟。",
+      "缓缓压下滤网，将咖啡全部倒进杯里，加入糖搅匀。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "maple-walnut",
+    "name": "枫糖核桃奶咖",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "少量核桃碎增添可咀嚼的烘烤香。",
+    "servings": 1,
+    "prepTimeMinutes": 5,
+    "totalTimeMinutes": 8,
+    "difficulty": "easy",
+    "flavorTags": [
+      "枫糖",
+      "核桃"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "刀",
+      "小锅"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 160,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "枫糖浆",
+        "amount": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "熟核桃仁",
+        "amount": 8,
+        "unit": "g",
+        "allergens": [
+          "坚果"
+        ]
+      }
+    ],
+    "steps": [
+      "核桃仁切成细碎，留作顶部配料。",
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "浓缩与枫糖浆拌匀，加入加热至 60°C 的牛奶，撒核桃碎；用匙配合饮用。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "坚果"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "earl-grey-coffee",
+    "name": "伯爵茶拿铁咖啡",
+    "category": "coffee",
+    "group": "creative",
+    "rarity": "rare",
+    "description": "佛手柑红茶浸入牛奶，增加芳香层次。",
+    "servings": 1,
+    "prepTimeMinutes": 6,
+    "totalTimeMinutes": 10,
+    "difficulty": "easy",
+    "flavorTags": [
+      "红茶",
+      "佛手柑"
+    ],
+    "equipment": [
+      "意式咖啡机",
+      "磨豆机",
+      "电子秤",
+      "小锅",
+      "细滤网"
+    ],
+    "ingredients": [
+      {
+        "name": "中深烘咖啡豆",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 60,
+        "unit": "ml",
+        "note": "咖啡机萃取准备水，目标接取 36 克咖啡液；机器水箱按设备最低水位另行加水，本用量不表示全部进入杯中。"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 180,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "伯爵红茶叶",
+        "amount": 3,
+        "unit": "g"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 10,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "小锅将牛奶加热至边缘冒小泡后离火，放入茶叶加盖浸泡 4 分钟。",
+      "将 18 克咖啡豆磨细，布粉压平；以 92–94°C 水萃取 25–30 秒，接取 36 克浓缩，余水为机器准备余量。",
+      "滤掉茶叶，将茶奶和糖加入浓缩搅匀；避免久煮导致红茶涩味。"
+    ],
+    "parameters": [
+      {
+        "label": "份量",
+        "value": "1 人份"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/coffee.svg",
+      "lineArt": "assets/line-art/coffee-cup.svg",
+      "animationTemplate": "coffee-cup"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "butter-cookies",
+    "name": "黄油小饼干",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "common",
+    "description": "松脆的基础黄油饼干，可配黑咖啡。",
+    "servings": 5,
+    "prepTimeMinutes": 20,
+    "totalTimeMinutes": 90,
+    "difficulty": "easy",
+    "flavorTags": [
+      "黄油",
+      "酥脆"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "烤盘",
+      "油纸",
+      "擀面杖"
+    ],
+    "ingredients": [
+      {
+        "name": "无盐黄油",
+        "amount": 80,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 45,
+        "unit": "g"
+      },
+      {
+        "name": "去壳鸡蛋",
+        "amount": 25,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      },
+      {
+        "name": "低筋面粉",
+        "amount": 140,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "盐",
+        "amount": 1,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "黄油室温软化至可按出凹痕，加入糖与盐搅打至颜色稍浅。",
+      "分两次加入蛋液，每次拌匀再加下一次；筛入面粉用刮刀拌至无干粉。",
+      "面团包好冷藏 30 分钟，擀成 5 毫米厚，切出约 20 块并间隔摆在铺纸烤盘。",
+      "烤箱预热至 170°C，上下火中层烤 15–18 分钟，边缘金黄即取出；烤架冷却 20 分钟。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "170°C"
+      },
+      {
+        "label": "烘烤",
+        "value": "15–18 分钟"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "cocoa-brownie",
+    "name": "浓可可布朗尼",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "rare",
+    "description": "可可粉版本带有湿润而非流动的中心。",
+    "servings": 9,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 105,
+    "difficulty": "medium",
+    "flavorTags": [
+      "可可",
+      "湿润"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "18 厘米方模",
+      "油纸",
+      "手动打蛋器"
+    ],
+    "ingredients": [
+      {
+        "name": "无盐黄油",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 140,
+        "unit": "g"
+      },
+      {
+        "name": "去壳鸡蛋",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      },
+      {
+        "name": "无糖可可粉",
+        "amount": 45,
+        "unit": "g"
+      },
+      {
+        "name": "低筋面粉",
+        "amount": 65,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "盐",
+        "amount": 1,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "18 厘米方模铺纸，烤箱预热 170°C。",
+      "黄油隔水融化，离火拌入糖和可可；放至不烫手后分次加入蛋液搅匀。",
+      "筛入面粉与盐，翻拌至无干粉，倒入模具抹平。",
+      "中层烤 22–27 分钟，牙签带湿润碎屑但无流动蛋糊即可；模内冷却 60 分钟再切 9 块。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "170°C"
+      },
+      {
+        "label": "烘烤",
+        "value": "22–27 分钟"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "banana-loaf",
+    "name": "香蕉磅蛋糕",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "common",
+    "description": "熟香蕉提供柔润口感，不需要打发黄油。",
+    "servings": 8,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 130,
+    "difficulty": "easy",
+    "flavorTags": [
+      "香蕉",
+      "松软"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "20×10 厘米吐司模",
+      "叉子"
+    ],
+    "ingredients": [
+      {
+        "name": "去皮熟香蕉",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "去壳鸡蛋",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      },
+      {
+        "name": "无味植物油",
+        "amount": 60,
+        "unit": "ml"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 70,
+        "unit": "g"
+      },
+      {
+        "name": "低筋面粉",
+        "amount": 180,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "泡打粉",
+        "amount": 6,
+        "unit": "g"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 40,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "盐",
+        "amount": 1,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "20×10 厘米吐司模铺纸，烤箱预热 175°C；香蕉压成泥。",
+      "蛋液、油、糖、牛奶与香蕉泥搅匀。",
+      "面粉、泡打粉与盐混合过筛，倒入湿料翻拌至看不到干粉即停止。",
+      "入模后中层烤 45–55 分钟，竹签插入中心无生面糊；模内放 10 分钟，再脱模冷却 50 分钟切片。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "175°C"
+      },
+      {
+        "label": "烘烤",
+        "value": "45–55 分钟"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "lemon-muffins",
+    "name": "柠檬酸奶玛芬",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "common",
+    "description": "酸奶帮助保持湿润，柠檬皮带来清香。",
+    "servings": 6,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 65,
+    "difficulty": "easy",
+    "flavorTags": [
+      "柠檬",
+      "酸奶"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "6 连玛芬模",
+      "纸托",
+      "擦屑器"
+    ],
+    "ingredients": [
+      {
+        "name": "低筋面粉",
+        "amount": 180,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 85,
+        "unit": "g"
+      },
+      {
+        "name": "泡打粉",
+        "amount": 6,
+        "unit": "g"
+      },
+      {
+        "name": "去壳鸡蛋",
+        "amount": 50,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      },
+      {
+        "name": "原味酸奶",
+        "amount": 120,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "无味植物油",
+        "amount": 60,
+        "unit": "ml"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "柠檬皮屑",
+        "amount": 2,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "烤箱预热 180°C，6 连玛芬模放纸托；柠檬洗净擦干后只擦黄色表皮。",
+      "面粉、泡打粉混合；另一碗搅匀蛋液、糖、酸奶、油、柠檬汁与皮屑。",
+      "干料倒入湿料，翻拌刚无干粉即可，分到纸托约八分满。",
+      "烤 22–25 分钟，顶部回弹且竹签无湿面糊，取出放烤架冷却 25 分钟。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "180°C"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "plain-scones",
+    "name": "原味司康",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "rare",
+    "description": "保持黄油冰冷，才能形成松散酥香的层次。",
+    "servings": 8,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 55,
+    "difficulty": "medium",
+    "flavorTags": [
+      "黄油",
+      "松酥"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "烤盘",
+      "油纸",
+      "刷子"
+    ],
+    "ingredients": [
+      {
+        "name": "低筋面粉",
+        "amount": 200,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "无盐黄油",
+        "amount": 55,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "name": "泡打粉",
+        "amount": 7,
+        "unit": "g"
+      },
+      {
+        "name": "盐",
+        "amount": 2,
+        "unit": "g"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 90,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "去壳鸡蛋",
+        "amount": 25,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      }
+    ],
+    "steps": [
+      "烤箱预热 200°C；冰黄油切小丁，与面粉、泡打粉、糖和盐用指尖快速搓成粗砂。",
+      "牛奶与 20 克蛋液混匀后倒入，刮刀拌到刚成团，切勿揉光滑。",
+      "面团压成 2.5 厘米厚圆饼，切 8 角，表面刷余下 5 克蛋液。",
+      "放铺纸烤盘，中层烤 18–22 分钟至表面金黄，冷却 15 分钟后食用。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "200°C"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "apple-crumble",
+    "name": "苹果酥粒烤碗",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "common",
+    "description": "苹果馅和松脆酥粒可直接用小碗烘烤。",
+    "servings": 4,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 65,
+    "difficulty": "easy",
+    "flavorTags": [
+      "苹果",
+      "肉桂"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "4 只 200 毫升耐热碗",
+      "刀"
+    ],
+    "ingredients": [
+      {
+        "name": "去核苹果",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "肉桂粉",
+        "amount": 1,
+        "unit": "g"
+      },
+      {
+        "name": "低筋面粉",
+        "amount": 80,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "无盐黄油",
+        "amount": 50,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "燕麦片",
+        "amount": 30,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      }
+    ],
+    "steps": [
+      "烤箱预热 180°C；苹果切 1.5 厘米块，与柠檬汁、20 克糖和肉桂拌匀，分进 4 只耐热烤碗。",
+      "面粉、燕麦、剩余 30 克糖与冰黄油丁搓成粗颗粒，铺在苹果上，不压实。",
+      "中层烤 30–35 分钟至酥粒金黄、果汁冒泡。",
+      "离炉静置 15 分钟再食用，内层果汁温度很高。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "180°C"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "baked-cheesecake",
+    "name": "小份烤芝士蛋糕",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "epic",
+    "description": "低温烘烤后充分冷藏，口感更细腻。",
+    "servings": 6,
+    "prepTimeMinutes": 20,
+    "totalTimeMinutes": 400,
+    "difficulty": "medium",
+    "flavorTags": [
+      "芝士",
+      "绵密"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "15 厘米固底圆模",
+      "滤网",
+      "冰箱"
+    ],
+    "ingredients": [
+      {
+        "name": "奶油奶酪",
+        "amount": 250,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 65,
+        "unit": "g"
+      },
+      {
+        "name": "去壳鸡蛋",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      },
+      {
+        "name": "淡奶油",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "玉米淀粉",
+        "amount": 10,
+        "unit": "g"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": 10,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "15 厘米固底圆模铺纸，奶油奶酪室温软化，烤箱预热 150°C。",
+      "奶酪和糖搅至顺滑，分三次拌入蛋液，再加入淡奶油、淀粉和柠檬汁。",
+      "面糊过筛入模，轻震排大泡；放中层烤 50–60 分钟，边缘凝固、中心仅轻颤。",
+      "关火开门一条缝放 20 分钟，取出室温放凉约 60 分钟，盖好冷藏至少 4 小时再脱模。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "150°C"
+      },
+      {
+        "label": "冷藏",
+        "value": "至少 4 小时"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "madeleines",
+    "name": "蜂蜜玛德琳",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "rare",
+    "description": "面糊休息后烘烤成贝壳小蛋糕。",
+    "servings": 6,
+    "prepTimeMinutes": 20,
+    "totalTimeMinutes": 120,
+    "difficulty": "medium",
+    "flavorTags": [
+      "蜂蜜",
+      "黄油"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "12 连玛德琳模",
+      "冰箱"
+    ],
+    "ingredients": [
+      {
+        "name": "去壳鸡蛋",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 65,
+        "unit": "g"
+      },
+      {
+        "name": "蜂蜜",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "低筋面粉",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "泡打粉",
+        "amount": 3,
+        "unit": "g"
+      },
+      {
+        "name": "无盐黄油",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "柠檬皮屑",
+        "amount": 1,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "融化 95 克黄油后放温，余下 5 克薄涂 12 连玛德琳模；面粉与泡打粉混合过筛。",
+      "蛋液、糖和蜂蜜搅至糖基本融化，拌入粉类，再分次拌入温黄油及皮屑。",
+      "盖好面糊冷藏 1 小时，烤箱预热 190°C。",
+      "面糊分进模具八分满，中层烤 10–13 分钟至边缘金黄，立即脱模，冷却 20 分钟。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "190°C"
+      },
+      {
+        "label": "面糊冷藏",
+        "value": "1 小时"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "almond-financier",
+    "name": "杏仁费南雪",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "rare",
+    "description": "焦化黄油与杏仁粉带来厚实坚果香。",
+    "servings": 8,
+    "prepTimeMinutes": 20,
+    "totalTimeMinutes": 95,
+    "difficulty": "medium",
+    "flavorTags": [
+      "杏仁",
+      "焦香"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "浅色小锅",
+      "8 连费南雪模",
+      "冰箱"
+    ],
+    "ingredients": [
+      {
+        "name": "无盐黄油",
+        "amount": 85,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "蛋清",
+        "amount": 80,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先将蛋清与蛋黄分离，轻轻搅匀蛋清再按克称取；蛋黄另作他用。"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 70,
+        "unit": "g"
+      },
+      {
+        "name": "杏仁粉",
+        "amount": 45,
+        "unit": "g",
+        "allergens": [
+          "坚果"
+        ]
+      },
+      {
+        "name": "低筋面粉",
+        "amount": 30,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "盐",
+        "amount": 0.5,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "取 80 克黄油放浅色小锅，小火煮至出现褐色小点和坚果香，立即离火倒入耐热碗；余 5 克涂 8 连小模。",
+      "蛋清与糖轻轻搅匀，不打发；加入过筛面粉、杏仁粉、盐拌匀。",
+      "焦化黄油放温后倒入面糊拌匀，盖好冷藏 30 分钟；烤箱预热 180°C。",
+      "面糊装模八分满，烤 14–17 分钟至四周金黄，脱模冷却 20 分钟。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "180°C"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "坚果",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "oat-raisin-cookies",
+    "name": "燕麦葡萄干饼干",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "common",
+    "description": "燕麦片保留嚼劲，葡萄干提供果甜。",
+    "servings": 8,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 60,
+    "difficulty": "easy",
+    "flavorTags": [
+      "燕麦",
+      "葡萄干"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "烤盘",
+      "油纸"
+    ],
+    "ingredients": [
+      {
+        "name": "无盐黄油",
+        "amount": 70,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "红糖",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "name": "去壳鸡蛋",
+        "amount": 50,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      },
+      {
+        "name": "低筋面粉",
+        "amount": 90,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "燕麦片",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "葡萄干",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "name": "泡打粉",
+        "amount": 3,
+        "unit": "g"
+      },
+      {
+        "name": "肉桂粉",
+        "amount": 0.5,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "黄油软化，与红糖搅匀，分次拌入蛋液；烤箱预热 175°C。",
+      "筛入面粉、泡打粉和肉桂，加入燕麦与葡萄干拌成团。",
+      "分成 16 份，间隔放铺纸烤盘，压到约 1 厘米厚。",
+      "烤 14–17 分钟至边缘变金黄，盘内放 5 分钟，再移烤架冷却 20 分钟。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "175°C"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "yogurt-cake",
+    "name": "原味酸奶蛋糕",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "common",
+    "description": "搅拌式蛋糕组织柔软，适合基础练习。",
+    "servings": 8,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 110,
+    "difficulty": "easy",
+    "flavorTags": [
+      "酸奶",
+      "松软"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "18 厘米圆模",
+      "油纸"
+    ],
+    "ingredients": [
+      {
+        "name": "去壳鸡蛋",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 85,
+        "unit": "g"
+      },
+      {
+        "name": "原味酸奶",
+        "amount": 150,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "无味植物油",
+        "amount": 60,
+        "unit": "ml"
+      },
+      {
+        "name": "低筋面粉",
+        "amount": 170,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "泡打粉",
+        "amount": 6,
+        "unit": "g"
+      },
+      {
+        "name": "盐",
+        "amount": 1,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "18 厘米圆模铺纸，烤箱预热 170°C。",
+      "蛋液与糖搅匀，再拌入酸奶和油至没有油花。",
+      "筛入面粉、泡打粉和盐，翻拌至无干粉后入模。",
+      "中层烤 35–42 分钟至竹签无生糊，模内放 10 分钟，脱模冷却 40 分钟。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "170°C"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "chocolate-chip-cookies",
+    "name": "巧克力豆软曲奇",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "common",
+    "description": "短时间烘烤，冷却后中心仍柔软。",
+    "servings": 6,
+    "prepTimeMinutes": 20,
+    "totalTimeMinutes": 100,
+    "difficulty": "easy",
+    "flavorTags": [
+      "巧克力",
+      "软心"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "烤盘",
+      "油纸",
+      "冰箱"
+    ],
+    "ingredients": [
+      {
+        "name": "无盐黄油",
+        "amount": 85,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "红糖",
+        "amount": 65,
+        "unit": "g"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 25,
+        "unit": "g"
+      },
+      {
+        "name": "去壳鸡蛋",
+        "amount": 50,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      },
+      {
+        "name": "低筋面粉",
+        "amount": 150,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "小苏打",
+        "amount": 2,
+        "unit": "g"
+      },
+      {
+        "name": "盐",
+        "amount": 1,
+        "unit": "g"
+      },
+      {
+        "name": "黑巧克力豆",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "乳",
+          "大豆"
+        ],
+        "note": "按含乳与大豆卵磷脂产品标注，请核对包装"
+      }
+    ],
+    "steps": [
+      "软化黄油与两种糖搅匀，分次加入蛋液。",
+      "筛入面粉、小苏打和盐拌到无干粉，拌入巧克力豆；盖好冷藏 30 分钟。",
+      "烤箱预热 175°C；面团分成 12 球，间隔至少 5 厘米摆烤盘，稍压平。",
+      "中层烤 11–13 分钟，边缘定形、中心仍偏软时取出，烤盘放 10 分钟后移架冷却 20 分钟。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "175°C"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "大豆",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "custard-tarts",
+    "name": "简易奶香蛋挞",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "rare",
+    "description": "使用现成挞皮，重点练习蛋奶液与火候。",
+    "servings": 6,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 55,
+    "difficulty": "medium",
+    "flavorTags": [
+      "蛋奶",
+      "酥皮"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "烤盘",
+      "小锅",
+      "滤网"
+    ],
+    "ingredients": [
+      {
+        "name": "冷冻蛋挞皮",
+        "amount": 240,
+        "unit": "g",
+        "allergens": [
+          "麸质",
+          "乳"
+        ],
+        "note": "12 只小挞皮，每只约 20 克；核对实际配料"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 180,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "淡奶油",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "蛋黄",
+        "amount": 60,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先将蛋黄与蛋清分离，打散蛋黄再按克称取；蛋清另作他用。"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 40,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "烤箱充分预热至 210°C，挞皮按包装要求解冻，连锡托摆在烤盘。",
+      "牛奶、淡奶油和糖小火加热至糖溶解，放至低于 50°C，再慢慢拌入蛋黄。",
+      "蛋奶液过筛，倒进 12 只挞皮约八分满。",
+      "中下层烤 20–25 分钟至挞边金黄、蛋液凝固且表面少量焦斑，静置 10 分钟再吃。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "210°C"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "baked-pears",
+    "name": "肉桂烤梨",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "common",
+    "description": "梨的汁水与少量黄油形成自然酱汁。",
+    "servings": 4,
+    "prepTimeMinutes": 10,
+    "totalTimeMinutes": 60,
+    "difficulty": "easy",
+    "flavorTags": [
+      "梨香",
+      "肉桂"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "耐热烤皿",
+      "挖球匙"
+    ],
+    "ingredients": [
+      {
+        "name": "去核梨",
+        "amount": 500,
+        "unit": "g"
+      },
+      {
+        "name": "无盐黄油",
+        "amount": 20,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "蜂蜜",
+        "amount": 25,
+        "unit": "g"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "肉桂粉",
+        "amount": 1,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 30,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "烤箱预热 190°C，梨纵向对半切，挖去果核。",
+      "梨切面朝上放烤皿，表面抹柠檬汁、蜂蜜与肉桂，每半块放少量黄油。",
+      "烤皿底加入 30 毫升水，烤 30–40 分钟，至叉子可轻松插入；中途舀皿底汁浇梨一次。",
+      "取出放 10 分钟，将烤汁一并舀入盘中。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "190°C"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "coffee-walnut-cake",
+    "name": "咖啡核桃方糕",
+    "category": "dessert",
+    "group": "baked",
+    "rarity": "rare",
+    "description": "可溶咖啡融入面糊，与熟核桃互相衬托。",
+    "servings": 9,
+    "prepTimeMinutes": 20,
+    "totalTimeMinutes": 110,
+    "difficulty": "medium",
+    "flavorTags": [
+      "咖啡",
+      "核桃"
+    ],
+    "equipment": [
+      "烤箱",
+      "电子秤",
+      "搅拌碗",
+      "刮刀",
+      "18 厘米方模",
+      "电动打蛋器"
+    ],
+    "ingredients": [
+      {
+        "name": "无盐黄油",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 90,
+        "unit": "g"
+      },
+      {
+        "name": "去壳鸡蛋",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "蛋"
+        ],
+        "note": "先去壳打散蛋液，再按克称取可食部分；不足一整颗的余量另作他用。"
+      },
+      {
+        "name": "低筋面粉",
+        "amount": 120,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "泡打粉",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "速溶纯咖啡粉",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 30,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "熟核桃仁",
+        "amount": 50,
+        "unit": "g",
+        "allergens": [
+          "坚果"
+        ]
+      }
+    ],
+    "steps": [
+      "18 厘米方模铺纸，烤箱预热 170°C；温牛奶溶解咖啡粉后放凉，核桃切碎。",
+      "软化黄油和糖打至颜色稍浅，分多次加入室温蛋液，每次充分拌匀。",
+      "筛入面粉、泡打粉，与咖啡牛奶交替拌入，最后拌入核桃。",
+      "入模抹平烤 30–35 分钟至竹签无湿糊，模内放 10 分钟再脱模冷却 40 分钟。"
+    ],
+    "parameters": [
+      {
+        "label": "烤温",
+        "value": "170°C"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "坚果",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/cake.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "vanilla-panna-cotta",
+    "name": "香草奶冻",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "低比例吉利丁带来柔软颤动的奶冻。",
+    "servings": 4,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 285,
+    "difficulty": "easy",
+    "flavorTags": [
+      "香草",
+      "奶香"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "小锅",
+      "滤网",
+      "4 只布丁杯"
+    ],
+    "ingredients": [
+      {
+        "name": "淡奶油",
+        "amount": 250,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 150,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "吉利丁粉",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 25,
+        "unit": "ml"
+      },
+      {
+        "name": "香草精",
+        "amount": 2,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "吉利丁粉撒在 25 毫升冷水上，静置 10 分钟吸水。",
+      "牛奶、淡奶油、糖与香草精小火加热至约 70°C，糖溶解后离火，勿煮沸。",
+      "放至约 55°C 加入泡好的吉利丁搅至全溶，过筛分进 4 只杯。",
+      "室温散热约 20 分钟后加盖冷藏至少 4 小时，凝固后用匙食用。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "至少 4 小时"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "coffee-jelly",
+    "name": "咖啡冻",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "微苦咖啡冻配少量牛奶，清爽收尾。",
+    "servings": 4,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 285,
+    "difficulty": "easy",
+    "flavorTags": [
+      "咖啡",
+      "清爽"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "耐热浅盒",
+      "刀"
+    ],
+    "ingredients": [
+      {
+        "name": "速溶纯咖啡粉",
+        "amount": 7,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "吉利丁粉",
+        "amount": 8,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 120,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      }
+    ],
+    "steps": [
+      "吉利丁粉用额外 40 毫升冷水浸泡 10 分钟。",
+      "400 毫升水加热，溶解咖啡与糖，放至约 55°C。",
+      "加入泡好的吉利丁搅匀，倒进浅盒；散热 20 分钟，加盖冷藏 4 小时。",
+      "切成小块分 4 杯，每杯加 30 毫升冷牛奶。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "4 小时"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "mango-yogurt-cups",
+    "name": "芒果酸奶杯",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "common",
+    "description": "无需凝固剂，水果与酸奶快速分层。",
+    "servings": 4,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 45,
+    "difficulty": "easy",
+    "flavorTags": [
+      "芒果",
+      "酸奶"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "搅拌机",
+      "4 只玻璃杯"
+    ],
+    "ingredients": [
+      {
+        "name": "芒果净果肉",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "原味浓酸奶",
+        "amount": 400,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "蜂蜜",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": 10,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "取 200 克芒果与柠檬汁打成泥，余下 100 克切成小丁。",
+      "酸奶与蜂蜜搅匀，4 只杯先放一半酸奶，再铺芒果泥，重复分层。",
+      "表面放芒果丁，盖好冷藏 30 分钟后享用；当天食用口感最好。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "30 分钟"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "chocolate-mousse",
+    "name": "无蛋巧克力慕斯",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "甘纳许与打发奶油融合，省去生蛋。",
+    "servings": 4,
+    "prepTimeMinutes": 25,
+    "totalTimeMinutes": 215,
+    "difficulty": "medium",
+    "flavorTags": [
+      "巧克力",
+      "轻盈"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "小锅",
+      "电动打蛋器",
+      "4 只甜品杯"
+    ],
+    "ingredients": [
+      {
+        "name": "黑巧克力",
+        "amount": 150,
+        "unit": "g",
+        "allergens": [
+          "乳",
+          "大豆"
+        ],
+        "note": "按含乳和大豆卵磷脂产品标注"
+      },
+      {
+        "name": "淡奶油",
+        "amount": 300,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      }
+    ],
+    "steps": [
+      "巧克力切碎；取 100 克淡奶油加热至边缘冒泡，倒在巧克力上静置 1 分钟，再从中心搅至光滑。",
+      "巧克力糊放凉至 30–35°C；余下 200 克冷淡奶油打到软弯钩，仍有流动性。",
+      "先把三分之一奶油拌进巧克力糊，再轻轻翻拌其余奶油。",
+      "分进 4 只杯，加盖冷藏至少 3 小时至定形。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "至少 3 小时"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "大豆"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "lemon-posset",
+    "name": "柠檬奶油杯",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "借柠檬酸与高脂奶油自然凝结，味道浓郁。",
+    "servings": 4,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 295,
+    "difficulty": "medium",
+    "flavorTags": [
+      "柠檬",
+      "浓醇"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "小锅",
+      "滤网",
+      "4 只小杯"
+    ],
+    "ingredients": [
+      {
+        "name": "淡奶油",
+        "amount": 300,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 75,
+        "unit": "g"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "柠檬皮屑",
+        "amount": 1,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "选脂肪含量至少 35% 的淡奶油，和糖、皮屑入小锅，中小火加热搅拌至糖融化。",
+      "开始轻沸后调小火保持轻沸 3 分钟，持续搅拌，注意溢锅。",
+      "离火倒入柠檬汁搅匀，静置 10 分钟后过筛分入 4 小杯。",
+      "放至不烫手，加盖冷藏至少 4 小时；凝固后直接用匙食用。"
+    ],
+    "parameters": [
+      {
+        "label": "奶油脂肪",
+        "value": "至少 35%"
+      },
+      {
+        "label": "冷藏",
+        "value": "至少 4 小时"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "strawberry-cheesecake-cups",
+    "name": "草莓免烤芝士杯",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "用杯子承托柔软奶酪馅，无需吉利丁。",
+    "servings": 4,
+    "prepTimeMinutes": 25,
+    "totalTimeMinutes": 205,
+    "difficulty": "medium",
+    "flavorTags": [
+      "草莓",
+      "芝士"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "电动打蛋器",
+      "4 只甜品杯"
+    ],
+    "ingredients": [
+      {
+        "name": "消化饼干",
+        "amount": 70,
+        "unit": "g",
+        "allergens": [
+          "麸质",
+          "乳"
+        ]
+      },
+      {
+        "name": "无盐黄油",
+        "amount": 30,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "奶油奶酪",
+        "amount": 200,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "淡奶油",
+        "amount": 120,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 45,
+        "unit": "g"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "草莓净果肉",
+        "amount": 180,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "饼干压碎与融化黄油拌匀，分到 4 只杯底压实，冷藏备用。",
+      "室温软化奶酪与糖、柠檬汁搅匀；冷淡奶油另打至软弯钩，分两次翻拌进奶酪。",
+      "一半草莓切丁分入杯中，再舀奶酪馅；加盖冷藏至少 3 小时。",
+      "食用前把剩余草莓切片摆在表面，不脱模，直接用匙食用。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "至少 3 小时"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "coconut-chia",
+    "name": "椰乳奇亚籽杯",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "奇亚籽吸水形成浓稠质地，适合提前准备。",
+    "servings": 4,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 255,
+    "difficulty": "easy",
+    "flavorTags": [
+      "椰香",
+      "籽粒"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "4 个带盖杯"
+    ],
+    "ingredients": [
+      {
+        "name": "无糖椰乳饮料",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "奇亚籽",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "name": "枫糖浆",
+        "amount": 25,
+        "unit": "ml"
+      },
+      {
+        "name": "蓝莓",
+        "amount": 100,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "椰乳饮料摇匀，与奇亚籽、枫糖浆在碗中搅匀。",
+      "静置 10 分钟，再搅一次打散结团，分入 4 个带盖杯。",
+      "冷藏至少 4 小时至籽充分吸水，食用前加洗净沥干的蓝莓。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "至少 4 小时"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "matcha-milk-pudding",
+    "name": "抹茶奶布丁",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "先用温水分散抹茶，减少结块。",
+    "servings": 5,
+    "prepTimeMinutes": 20,
+    "totalTimeMinutes": 290,
+    "difficulty": "easy",
+    "flavorTags": [
+      "抹茶",
+      "奶香"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "小锅",
+      "茶筅",
+      "滤网",
+      "5 只布丁杯"
+    ],
+    "ingredients": [
+      {
+        "name": "全脂牛奶",
+        "amount": 400,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "淡奶油",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "抹茶粉",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "吉利丁粉",
+        "amount": 7,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 35,
+        "unit": "ml"
+      },
+      {
+        "name": "饮用水",
+        "amount": 30,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "吉利丁粉用 35 毫升冷水泡 10 分钟；抹茶过筛，用额外 30 毫升 75°C 水搅成顺滑糊。",
+      "牛奶、奶油和糖加热至 70°C 离火，将部分热奶加入抹茶糊调开，再倒回锅中。",
+      "降至约 55°C 加入泡好的吉利丁搅匀，过筛分入 5 杯。",
+      "散热约 20 分钟后加盖冷藏至少 4 小时。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "至少 4 小时"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "berry-overnight-oats",
+    "name": "莓果隔夜燕麦杯",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "燕麦冷泡后柔软，莓果提供酸甜。",
+    "servings": 3,
+    "prepTimeMinutes": 10,
+    "totalTimeMinutes": 370,
+    "difficulty": "easy",
+    "flavorTags": [
+      "谷物",
+      "莓果"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "3 个带盖杯"
+    ],
+    "ingredients": [
+      {
+        "name": "即食燕麦片",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "麸质"
+        ]
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 250,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "原味酸奶",
+        "amount": 150,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "蜂蜜",
+        "amount": 25,
+        "unit": "g"
+      },
+      {
+        "name": "蓝莓",
+        "amount": 150,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "燕麦片、牛奶、酸奶和蜂蜜混合，搅拌至燕麦全部浸湿。",
+      "分进 3 个带盖杯，盖好冷藏至少 6 小时。",
+      "食用前拌匀，加入洗净沥干的蓝莓；在制作后 24 小时内吃完。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "至少 6 小时"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "rice-pudding",
+    "name": "香草米布丁",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "慢煮出米的淀粉，冷藏后自然浓稠。",
+    "servings": 4,
+    "prepTimeMinutes": 10,
+    "totalTimeMinutes": 190,
+    "difficulty": "easy",
+    "flavorTags": [
+      "米香",
+      "香草"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "厚底锅",
+      "4 只浅杯"
+    ],
+    "ingredients": [
+      {
+        "name": "短粒大米",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 600,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "饮用水",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 45,
+        "unit": "g"
+      },
+      {
+        "name": "香草精",
+        "amount": 2,
+        "unit": "ml"
+      },
+      {
+        "name": "盐",
+        "amount": 0.5,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "大米快速冲洗一次沥干，和 200 毫升水入厚底锅，小火煮约 10 分钟至水大多吸收。",
+      "加入牛奶、糖、香草精和盐，小火煮 25–30 分钟，频繁刮底搅拌，至米完全软且液体浓稠。",
+      "分进 4 只浅杯，放凉约 20 分钟后盖好冷藏至少 2 小时；冷却全程不要在室温放置超过 2 小时。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "至少 2 小时"
+      }
+    ],
+    "allergens": [
+      "乳"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "orange-agar",
+    "name": "香橙琼脂冻",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "rare",
+    "description": "琼脂需要煮沸溶解，成品更脆爽。",
+    "servings": 4,
+    "prepTimeMinutes": 15,
+    "totalTimeMinutes": 115,
+    "difficulty": "medium",
+    "flavorTags": [
+      "香橙",
+      "脆爽"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "小锅",
+      "4 只小杯"
+    ],
+    "ingredients": [
+      {
+        "name": "无果肉橙汁",
+        "amount": 300,
+        "unit": "ml"
+      },
+      {
+        "name": "饮用水",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "琼脂粉",
+        "amount": 3,
+        "unit": "g"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 35,
+        "unit": "g"
+      },
+      {
+        "name": "橙子净果肉",
+        "amount": 100,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "橙子去籽去白膜，果肉分到 4 只小杯。",
+      "琼脂粉和糖混合，加入 200 毫升冷水搅匀，加热至沸腾后小火煮 2 分钟，确保琼脂完全溶解。",
+      "橙汁另加热到约 60°C，离火后与琼脂液迅速混匀，立即分杯。",
+      "室温放约 30 分钟至初步凝固，再盖好冷藏 1 小时；不要让酸性果汁与琼脂久煮。"
+    ],
+    "parameters": [
+      {
+        "label": "琼脂沸煮",
+        "value": "2 分钟"
+      },
+      {
+        "label": "冷藏",
+        "value": "1 小时"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "mango-sago",
+    "name": "芒果椰乳西米露",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "common",
+    "description": "西米先煮透再冷却，不把生粉直接泡进椰乳。",
+    "servings": 4,
+    "prepTimeMinutes": 20,
+    "totalTimeMinutes": 120,
+    "difficulty": "easy",
+    "flavorTags": [
+      "芒果",
+      "椰香"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "大锅",
+      "滤网",
+      "4 只甜品杯"
+    ],
+    "ingredients": [
+      {
+        "name": "小西米",
+        "amount": 70,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 1200,
+        "unit": "ml"
+      },
+      {
+        "name": "无糖椰乳饮料",
+        "amount": 350,
+        "unit": "ml"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "name": "芒果净果肉",
+        "amount": 250,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "大锅把 1200 毫升水煮沸后倒入小西米，中火煮约 15 分钟并常搅，至仅有少量白芯。",
+      "关火盖盖焖 10 分钟，若仍有白芯再煮 3–5 分钟；滤出后用凉开水冲去黏液、沥干。",
+      "椰乳与糖小火加热至糖溶解，放凉，与西米混合后盖好冷藏 1 小时。",
+      "芒果切丁分进 4 杯，加入冷西米椰乳，当天食用。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "1 小时"
+      }
+    ],
+    "allergens": [],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "black-sesame-pudding",
+    "name": "黑芝麻奶冻",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "芝麻糊拌入奶基底，浓香中带细微颗粒。",
+    "servings": 4,
+    "prepTimeMinutes": 20,
+    "totalTimeMinutes": 290,
+    "difficulty": "easy",
+    "flavorTags": [
+      "芝麻",
+      "浓香"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "小锅",
+      "小打蛋器",
+      "4 只布丁杯"
+    ],
+    "ingredients": [
+      {
+        "name": "全脂牛奶",
+        "amount": 350,
+        "unit": "ml",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "淡奶油",
+        "amount": 100,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "无糖黑芝麻酱",
+        "amount": 40,
+        "unit": "g",
+        "allergens": [
+          "芝麻"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 45,
+        "unit": "g"
+      },
+      {
+        "name": "吉利丁粉",
+        "amount": 7,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 35,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "吉利丁用 35 毫升冷水泡 10 分钟；芝麻酱先和 50 毫升牛奶搅开。",
+      "小锅加入其余牛奶、奶油、糖和芝麻糊，加热到 70°C，搅拌均匀后离火。",
+      "降至约 55°C 时加入吉利丁搅至完全溶解，再边搅边分到 4 杯，减少芝麻沉底。",
+      "放凉约 20 分钟，加盖冷藏至少 4 小时后享用。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "至少 4 小时"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "芝麻"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "no-egg-tiramisu",
+    "name": "无生蛋提拉米苏杯",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "epic",
+    "description": "以无酒无生蛋奶酪馅配短浸咖啡饼干。",
+    "servings": 4,
+    "prepTimeMinutes": 25,
+    "totalTimeMinutes": 385,
+    "difficulty": "medium",
+    "flavorTags": [
+      "咖啡",
+      "奶酪"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "电动打蛋器",
+      "筛网",
+      "4 只甜品杯"
+    ],
+    "ingredients": [
+      {
+        "name": "马斯卡彭奶酪",
+        "amount": 250,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "淡奶油",
+        "amount": 200,
+        "unit": "g",
+        "allergens": [
+          "乳"
+        ]
+      },
+      {
+        "name": "细砂糖",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "手指饼干",
+        "amount": 120,
+        "unit": "g",
+        "allergens": [
+          "麸质",
+          "蛋"
+        ]
+      },
+      {
+        "name": "速溶纯咖啡粉",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "饮用水",
+        "amount": 180,
+        "unit": "ml"
+      },
+      {
+        "name": "无糖可可粉",
+        "amount": 5,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "用 180 毫升热水溶解咖啡粉，完全放凉；奶酪与糖轻拌至顺滑。",
+      "冷淡奶油打至软弯钩，分两次拌进奶酪，避免过度搅拌油水分离。",
+      "手指饼干在凉咖啡中每面快速蘸一下，4 杯依次交替铺饼干和奶酪馅。",
+      "盖好冷藏至少 6 小时，食用前筛上可可粉；饼干通常含熟制鸡蛋，本配方无额外生蛋。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "至少 6 小时"
+      }
+    ],
+    "allergens": [
+      "乳",
+      "蛋",
+      "麸质"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  },
+  {
+    "id": "peanut-tofu-cream",
+    "name": "花生豆腐甜品杯",
+    "category": "dessert",
+    "group": "chilled",
+    "rarity": "common",
+    "description": "即食嫩豆腐与花生酱打成细腻植物甜品。",
+    "servings": 4,
+    "prepTimeMinutes": 10,
+    "totalTimeMinutes": 70,
+    "difficulty": "easy",
+    "flavorTags": [
+      "花生",
+      "可可"
+    ],
+    "equipment": [
+      "电子秤",
+      "搅拌碗",
+      "冰箱",
+      "搅拌机",
+      "4 只小杯"
+    ],
+    "ingredients": [
+      {
+        "name": "即食内酯豆腐",
+        "amount": 400,
+        "unit": "g",
+        "allergens": [
+          "大豆"
+        ],
+        "note": "必须选择标签注明可直接食用的产品"
+      },
+      {
+        "name": "顺滑无糖花生酱",
+        "amount": 60,
+        "unit": "g",
+        "allergens": [
+          "花生"
+        ]
+      },
+      {
+        "name": "枫糖浆",
+        "amount": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "无糖可可粉",
+        "amount": 8,
+        "unit": "g"
+      },
+      {
+        "name": "熟花生碎",
+        "amount": 15,
+        "unit": "g",
+        "allergens": [
+          "花生"
+        ]
+      }
+    ],
+    "steps": [
+      "即食内酯豆腐沥去盒内水分，用干净匙取出。",
+      "将豆腐、花生酱、枫糖浆和可可粉放入搅拌机，搅打 1–2 分钟至完全顺滑，中途刮壁一次。",
+      "分进 4 只杯，盖好冷藏至少 1 小时；食用前撒熟花生碎，制作后 24 小时内吃完。"
+    ],
+    "parameters": [
+      {
+        "label": "冷藏",
+        "value": "至少 1 小时"
+      }
+    ],
+    "allergens": [
+      "大豆",
+      "花生"
+    ],
+    "artwork": {
+      "image": "assets/cards/chilled.svg",
+      "lineArt": "assets/line-art/dessert-outline.svg",
+      "animationTemplate": "dessert-outline"
+    },
+    "source": {
+      "sourceType": "original",
+      "sourceName": "Daily Ritual 原创编辑配方",
+      "sourceUrl": "docs/recipe-sources.md",
+      "license": "本项目原创配方文字；未引入外部文字或图片，使用权限以项目仓库许可为准。",
+      "attribution": "Daily Ritual 项目原创编辑整理",
+      "reviewStatus": "reviewed",
+      "lastVerifiedAt": "2026-10-14",
+      "reviewNote": "已检查原料比例、步骤、时间与过敏原标注；未进行厨房实测，请依设备表现调整。"
+    }
+  }
+]
